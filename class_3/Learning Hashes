@@ -1,0 +1,27 @@
+q_pile = [
+	{
+		question:"question1 ?",
+		o1:"option1-1",
+		o2:"option1-2",
+		o3:"option1-3",
+		o4:"option1-4",
+		ak:1,
+	},
+	{
+		question:"question2 ?",
+		o1:"option2-1",
+		o2:"option2-2",
+		o3:"option2-3",
+		o4:"option2-4",
+		ak: 1,
+	},
+
+	{
+		question:"question3 ?",
+		o1:"option3-1",
+		o2:"option3-2",
+		o3:"option3-3",
+		o4:"option4-4",
+		ak: 1,
+	}
+]

@@ -1,0 +1,19 @@
+Horse Race Notes:
+4 horses
+each horse has a name
+horse 1 is your horse (Golden_Nugget)
+3 villian horses (Bad_Boy, Raggy_Runner, Mean_and_Sneaky)
+every user input causes a random advance of the horses
+horses will move a random amount of spaces on their own
+
+your horse will move a random number 1-4, finish line = 20
+motivation codes double the value or auto win
+special patterns are typed "asdi" is a motivation code
+
+
+horse race will be a class
+horses must all be a class
+
+villian class?
+
+minimum of one horse class 

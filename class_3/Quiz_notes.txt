@@ -1,0 +1,64 @@
+=begin
+#beginning of Initialation notes:
+
+This is the hash of questions:
+Here are the requirements
+1.  make 10 questions, 
+	show questions, 
+	show rules for quiz
+2. make answers
+3. make answer key
+4. establish right/wrong, increment count of right or wrong
+5. Give answer of number correctly answered,
+	produce the percentage as a math funtion, 
+	passing grade is 50% or greater.
+
+1. Question format:
+#start of hash
+questions_to_ask = { 
+	
+	{Question:"Why is the sky blue?", 
+	Answer_key:1,
+	Answer_Choices:
+	"To help your mind relax",
+	"its better than black",
+	"It seems like the right thing"
+	}
+	
+	{
+	Question:"Why is the sky blue?", 
+	Answer_key:1
+	Answer_Choices:
+	"To help your mind relax",
+	"its better than black",
+	"It seems like the right thing"
+	}
+	]
+	}
+# end of initialization notes
+
+#def ask_question
+#	hash.each do 
+=end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
