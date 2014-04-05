@@ -1,6 +1,6 @@
 
 			@horse_lap = 18
-			@track_lap = 20
+			@track_lap = 3
 			@horse_name = 'good guy horse'
 			@go_no_go = "go"
 			@run_race = "y"
@@ -9,10 +9,11 @@
 
 			def check_win
 				if @horse_lap > 20
+					@track_lap=0
 							system("clear")
 							puts "Winner Winner Chicken Dinner"
 							puts ''
-							puts 'Horse: #/{@horse_name} is the WINNER!!!'
+							puts "Horse: #{@horse_name} is the WINNER!!!"
 				end
 			end
 						
@@ -29,28 +30,13 @@
 						 puts @go_no_go #, sleep 2
 							@track_lap -= 1
 							@horse_lap += 1
-							# system("clear")
-							# check_win	
-								if @horse_lap > 19
-									system("clear")
-									puts "Winner Winner Chicken Dinner"
-									puts ''
-									puts 'Horse: #/{@horse_name} is the WINNER!!!'
-								end	
-							
+							system("clear")
+							check_win								
 
 						else
-							puts "you have successfully entered a winner pass key"; sleep 2# horse_lap += 1
+							puts "You have successfully entered a winner pass key"; sleep 2# horse_lap += 1
 							track_lap -= 1
 							horse_lap += 10
-							# check_win #system("clear")
-								if @horse_lap > 19
-											system("clear")
-											puts "Winner Winner Chicken Dinner"
-											puts ''
-											puts 'Horse: #{@horse_name} is the WINNER!!!'
-								end
-							# horse_lap += rand(1.4)
-							# puts "The Winner is: #{horse_winner}"
+							check_win #system("clear")
 						end
 			end	
