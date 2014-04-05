@@ -7,8 +7,7 @@ class = Track
   def initialize (name, lap)
     @name = name
     @lap = []
-    @@n = 0
-    # @sorted_crops = {cherry:{}}
+    
   end
 
   def add_lap(horse)
@@ -19,12 +18,12 @@ class = Track
     @@track_laps += 1
   end
 
-  def track_status
-    @.each do |crop|
-      if crop.class == Apple
-        @sorted_crop[apple:].push(crop)
+  # def track_status
+  #   @.each do |crop|
+  #     if crop.class == Apple
+  #       @sorted_crop[apple:].push(crop)
       
-      elsif crop.class == Cherry
-        @sorted_crops[cherry:].push(crop)
-      end
-    end   
+  #     elsif crop.class == Cherry
+  #       @sorted_crops[cherry:].push(crop)
+  #     end
+  #   end   

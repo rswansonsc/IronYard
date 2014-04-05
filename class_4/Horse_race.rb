@@ -7,12 +7,11 @@ horse_1=Horse.new("Golden Nugget", "Good Guy", 0)
 horse_2=Horse.new("Bad_Mare", "Bad_Guy", 0)
 horse_3=Horse.new("Raggy_Runner", "Bad_Guy", 0)
 horse_4=Horse.new("Mad_Meany", "Bad_Guy", 0)
-
+end
 # Display horse and lap position
 
 # (1..4).each do |number|
 # 	"horse_#{number}"
-# end
 
 def race	
 horse_lap=19	
