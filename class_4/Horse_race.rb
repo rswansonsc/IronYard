@@ -1,6 +1,8 @@
-require "./horse.rb" #causes the code from cherry.rb to be pulled into process
-# require "./track.rb" #causes the code from apple.rb to be pulled into process
+require "./horse.rb" #causes the Object code "Horse"from horse.rb to be pulled into process
+# Horse. :name, :breed, :horse_lap
 
+ require "./track.rb" #causes the code from "Track"from track.rb to be pulled into process
+# Track. :name, :lap
 
 def initialize (name, breed, horse_lap)
 horse_1=Horse.new("Golden Nugget", "Good Guy", 0)
@@ -8,7 +10,15 @@ horse_2=Horse.new("Bad_Mare", "Bad_Guy", 0)
 horse_3=Horse.new("Raggy_Runner", "Bad_Guy", 0)
 horse_4=Horse.new("Mad_Meany", "Bad_Guy", 0)
 end
+
 # Display horse and lap position
+def display_race
+	system("clear")
+		puts "Horse 1: #{horse_1.name}\t Track Position: #{horse_1.horse_lap}"
+		puts "Horse 2: #{horse_2.name}\t Track Position: #{horse_2.horse_lap}"
+		puts "Horse 3: #{horse_3.name}\t Track Position: #{horse_3.horse_lap}"
+		puts "Horse 4: #{horse_4.name}\t Track Position: #{horse_4.horse_lap}"
+end
 
 # (1..4).each do |number|
 # 	"horse_#{number}"
@@ -23,12 +33,7 @@ horse_winner = WinnerWinner
 	puts "Horses to the ready!"; sleep 1;system("clear")
 	puts "Their Off!!!"; sleep 1;system("clear")
 	if run_race == true
-		system("clear")
-		puts "Horse 1: #{horse_1.name}\t Track Position: #{horse_1.horse_lap}"
-		puts "Horse 2: #{horse_2.name}\t Track Position: #{horse_2.horse_lap}"
-		puts "Horse 3: #{horse_3.name}\t Track Position: #{horse_3.horse_lap}"
-		puts "Horse 4: #{horse_4.name}\t Track Position: #{horse_4.horse_lap}"
-
+		
 
 			# Get user input
 			# compare the user input to the winner code
