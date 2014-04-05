@@ -1,7 +1,7 @@
 require "./horse.rb" #causes the Object code "Horse"from horse.rb to be pulled into process
 # Horse. :name, :breed, :horse_lap
 
- require "./track.rb" #causes the code from "Track"from track.rb to be pulled into process
+#require "./track.rb" #causes the code from "Track"from track.rb to be pulled into process
 # Track. :name, :lap
 
 def initialize (name, breed, horse_lap)
@@ -19,7 +19,7 @@ def display_race
 		puts "Horse 3: #{horse_3.name}\t Track Position: #{horse_3.horse_lap}"
 		puts "Horse 4: #{horse_4.name}\t Track Position: #{horse_4.horse_lap}"
 end
-
+system("clear")
 # (1..4).each do |number|
 # 	"horse_#{number}"
 
@@ -62,7 +62,7 @@ horse_winner = WinnerWinner
 					
 	
 		while @track_lap != 0
-
+			display_race
 			puts "you are on Horse lap #{@horse_lap}"
 			puts "remaining Track laps #{@track_lap}"
 			puts "Enter code, word from dictionary!!"
@@ -82,6 +82,8 @@ horse_winner = WinnerWinner
 						check_win #system("clear")
 					end
 		end	
+	end
+end	
 # puts horse_1.name
 # puts horse_"#{1..4).to_f}"
 

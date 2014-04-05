@@ -1,0 +1,10 @@
+
+while:
+a = %w( a b c)
+ => ["a", "b", "c"] 
+
+while (i = a.shift) do; puts i ; end
+a
+b
+c
+ => nil 
