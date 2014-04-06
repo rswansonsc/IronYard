@@ -18,6 +18,7 @@ class  Track
   def display_race
       # system("clear")
       puts "Start---------------------------------Finish"
+#NICK this first line runs but the #{horse_1.name} seems to keep giving me errors
       # puts horse_1.name
       puts "Horse_1: #{horse_1.name}\t Lap: #{(horse_1.horse_lap).times {print "*"}}"
       puts "Horse_2: #{horse_2.name}\t Lap: #{(horse_2.horse_lap).times {print "*"}}"
@@ -26,8 +27,9 @@ class  Track
 
 
   end
-
-  def check_win
+#NICK this method(i think I am calling that correctly) does not seem to be able to run from the 
+#Horse_race.rb???
+  def check_win 
         display_race
         if horse_1.horse_lap >= 20 then @horse_winner = horse_1.name; end 
         if horse_2.horse_lap >= 20 then @horse_winner = horse_2.name; end
@@ -37,12 +39,14 @@ class  Track
   end 
 
   def annouce_winner
-  # @track_lap=20
-  # @run_race=false
+  @track_lap=20
+  @run_race=false
   puts "Winner Winner Chicken Dinner"
   puts ''
   puts "Horse: #{@horse_winner} is the WINNER!!!"
-  @display_race
+#NICK not sure if this should have the '@display_race' here or not but does seem to be able to call from
+#Horse_race.rb??? 
+  @display_race 
   end
 end
 
