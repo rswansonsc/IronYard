@@ -1,22 +1,23 @@
 class = Track
 
-  @@track_laps = 0
-  @@track_winner = false
-  attr_accessor :name, :lap
+  @@track_lap = 0
+  # @@track_winner = false
+  attr_accessor :name, :track_lap
 
-  def initialize (name, lap)
+  def initialize (name, track_lap)
     @name = name
-    @lap = []
-    
+    @@track_lap = track_lap    
   end
 
-  def add_lap(horse)
-    @add_lap.push(horse_lap)
+  def advance_track_lap(horse)
+    @@track_lap += 1
   end
-    
-  def self.no_of_laps
-    @@track_laps += 1
-  end
+  
+  # move_horse_lap
+  
+  # def self.no_of_laps
+  #   @track_lap += 1
+  # end
 
   # def track_status
   #   @.each do |crop|

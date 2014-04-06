@@ -1,5 +1,33 @@
+ Local Variable: 			name fish_and_chips x_axis thx1138 _x _26
+ Instance Variable: 	@name @point_1 @X @_ @plan9
+ Class Variable: 			@@total @@symtab @@N @@x_pos @@SINGLE
+ Global Variable: 		$debug $CUSTOMER $_ $plan9 $Global
+ Class Name: 					String ActiveRecord MyClass 
+ Constant Name:				FEET_PER_MILE DEBUG
+ 
+**** Arrays **** 
+a = [ 1, 'cat', 3.14 ] 
+# array with three elements 
+puts "The first element is #{a[0]}"
+# set the third element
+a[2] = nil
+puts "The array is now #{a.inspect}"
 
-while:
+produces:
+       The first element is 1
+       The array is now [1, "cat", nil]
+
+
+a = [ 'ant', 'bee', 'cat', 'dog', 'elk' ] 
+a[0] # => "ant"
+a[3] # => "dog"
+
+# this is the same:
+a = %w{ ant bee cat dog elk } 
+a[0] # => "ant"
+a[3] # => "dog"
+
+#another example
 a = %w( a b c)
  => ["a", "b", "c"] 
 
@@ -8,3 +36,176 @@ a
 b
 c
  => nil 
+
+# print an array using the .each loop
+horse_2.horse_lap.each {|horse_lap| print horse_lap}
+
+**** Hashes ****
+For example, you could use a hash to map musical instruments to their orchestral sections.
+
+inst_section = {
+'cello' => 'string', 
+'clarinet' => 'woodwind',
+'drum' => 'percussion', 
+'oboe' => 'woodwind', 
+'trumpet' => 'brass', 
+'violin' => 'string'
+}
+
+The thing to the left of the => or : is the key, and the thing to the right is the corresponding value. Keys in a particular hash must be unique; you can’t have two entries for “drum.” The keys and values in a hash can be arbitrary objects. You can have hashes where the values are arrays, other hashes, and so on.
+Hashes are indexed using the same square bracket notation as arrays. In this code, we’ll use the p method to write the values to the console. This works like puts but displays values such as nil explicitly.
+
+p inst_section['oboe']
+p inst_section['cello']
+p inst_section['bassoon']
+produces:
+       "woodwind"
+       "string"
+       nil (the system gives a nil because there is no key called 'bassoon' so the value for no key match is a nil)
+
+**** Symbols ****
+In fact, symbols are so frequently used as hash keys that Ruby has a shortcut syntax: you can use 'name:'' value pairs to create a hash if the keys are symbols:
+
+inst_section = {
+cello: 'string', 
+clarinet: 'woodwind', 
+drum: 'percussion', 
+oboe: 'woodwind', 
+trumpet: 'brass', 
+violin: 'string'
+}
+puts "An oboe is a #{inst_section[:oboe]} instrument"
+produces:
+An oboe is a woodwind instrument
+
+
+**** Loops ****
+Ruby has all the usual control structures, such as if statements and while loops. Java, C, and Perl programmers may well get caught by the lack of braces around the bodies of these statements. Instead, Ruby uses the keyword end to signify the end of a body of all the control structures:
+       
+today = Time.now
+
+if today.saturday?
+puts "Do chores around the house"
+elsif today.sunday? 
+puts "Relax"
+else
+puts "Go to work" 
+end
+
+produces:
+Go to work
+
+Similarly, while statements are terminated with end:
+num_pallets = 0
+weight = 0
+
+while weight < 100 and num_pallets <= 5
+         pallet  = next_pallet()
+         weight += pallet.weight
+         num_pallets += 1
+end
+
+Most statements in Ruby return a value, which means you can use them as conditions. For example, the kernel method gets returns the next line from the standard input stream or nil when the end of the file is reached. Because Ruby treats nil as a false value in conditions, you could write the following to process the lines in a file:
+
+while line = gets 
+puts line.downcase
+end
+
+Here, the assignment statement sets the variable line to either the next line of text or nil, and then the while statement tests the value of the assignment, terminating the loop when it is nil.
+
+Ruby statement modifiers are a useful shortcut if the body of an if or while statement is just a single expression. Simply write the expression, followed by if or while and the condition. 
+For example, here’s a simple if statement:
+
+if radiation > 3000
+puts "Danger, Will Robinson"
+end
+
+Here it is again, rewritten using a statement modifier:
+
+puts "Danger, Will Robinson" if radiation > 3000while:
+
+
+**** Other ****
+use just 'p' #/nil is explicit
+
+ puts "Hello, Ruby Programmer"
+ puts "It is now #{Time.now}"
+ #note: the Time.now (Time must be in uppercase)
+
+ puts "Hello, Ruby Programmer"; Sleep 5 
+ system("clear") - clears screen
+ system("ls") - lists directory
+ system("mkdir test") - creates a directory called "test"
+ 
+ #note: this give the wait time of 5 seconds, next line clears screen (lc) syntax to pass command to Terminal for Clear command.
+	
+	*(lc) = lower case
+
+The second thing that Ruby does with double-­‐‑quoted strings is expression interpolation. Within the string, the sequence #{expression} is replaced by the value of expression. We could use this to rewrite our previous method:
+
+	def say_goodnight(name)
+	result = "Good night, #{name}" 
+	return result
+	end
+
+	puts say_goodnight('Pa') 
+	
+	produces:
+	Good night, Pa
+
+Another Example:
+	a = [ 1, 'cat', 3.14 ] # array with three elements 
+
+	puts "The first element is #{a[0]}" # set the third element
+	a[2] = nil
+	puts "The array is now #{a.inspect}"
+
+	produces:
+  The first element is 1
+  The array is now [1, "cat", nil]
+
+ **** Yield ****
+
+
+ 	def 
+ 	who_says_what 
+ 	yield("Dave", "hello") 
+ 	yield("Andy", "goodbye")
+	end
+
+who_says_what {|person, phrase| puts "#{person} says #{phrase}"}
+
+produces:
+Dave says hello
+Andy says goodbye
+
+Code blocks are used throughout the Ruby library to implement iterators, which are methods that return successive elements from some kind of collection, such as an array:
+
+animals = %w( ant bee cat dog ) 			# create an array
+animals.each {|animal| puts animal } 	# iterate over the contents
+
+produces:
+ant
+bee
+cat
+dog
+
+**** Substitutions ****
+
+line = gets
+if line =~ /Perl|Python/
+puts "Scripting language mentioned: #{line}" 
+end
+
+The part of a string matched by a regular expression can be replaced with different text using one of Ruby’s substitution methods:
+
+line = gets
+newline = line.sub(/Perl/, 'Ruby') 
+# replace first 'Perl' with 'Ruby' 
+
+newerline = newline.gsub(/Python/, 'Ruby') 
+# replace every 'Python' with 'Ruby'
+
+You can replace every occurrence of Perl and Python with Ruby using this: 
+line = gets
+newline = line.gsub(/Perl|Python/, 'Ruby')
