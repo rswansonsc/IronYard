@@ -1,6 +1,6 @@
 class Horse	
 
-  @@horse_lap_count = 0
+  # @@horse_lap_count = 0
   
   attr_accessor :name, :breed, :horse_lap 
   #where :breed is the "Good_Guy" (me) or the "Villian" (bad other 3 horses)
@@ -9,12 +9,12 @@ class Horse
     @name = name
     @breed = breed
     @horse_lap = horse_lap
-    @@horse_lap_count += 1
+    # @@horse_lap_count += 1
   end
 
   def move_horse_lap
     @horse_lap += rand(1..4)
-
+    
   end
 
 end

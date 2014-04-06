@@ -1,53 +1,84 @@
 require "./horse.rb" #causes the Object code "Horse"from horse.rb to be pulled into process
 # Horse. :name, :breed, :horse_lap
 
-#require "./track.rb" #causes the code from "Track"from track.rb to be pulled into process
+require "./track.rb" #causes the code from "Track"from track.rb to be pulled into process
 # Track. :name, :lap
 
-horse_1 = Horse.new("Golden Nugget", "Good Guy", 2)
-horse_2 = Horse.new("Bad_Mare", "Bad_Guy", 1)
-horse_3 = Horse.new("Raggy_Runner", "Bad_Guy", 1)
-horse_4 = Horse.new("Mad_Meany", "Bad_Guy", 3)
+horse_1 = Horse.new("Golden Nugget", "Good Guy", 0)
+horse_2 = Horse.new("Bad_Mare", "Bad_Guy", 0)
+horse_3 = Horse.new("Raggy_Runner", "Bad_Guy", 0)
+horse_4 = Horse.new("Mad_Meany", "Bad_Guy", 0)
 
-# track_1 = Track.new("Dounty Downs", 0)
+track_1 = Track.new("Dounty Downs", 0)
 
 # Display horse and lap position
-	def display_race
-		system("clear")
-		
-		puts "Horse 1: #{horse_1.name}\t Track Position:"
-		(horse_1.horse_lap).times {print "*"}	
-		
-		puts "Horse 2: #{horse_2.name}\t Track Position: #{horse_2.horse_lap}"
-		(horse_2.horse_lap).times {print "*"}	
-		
-		puts "Horse 3: #{horse_3.name}\t Track Position: #{horse_3.horse_lap}"
-		(horse_3.horse_lap).times {print "*"}	
-		
-		puts "Horse 4: #{horse_4.name}\t Track Position: #{horse_4.horse_lap}"
-		(horse_4.horse_lap).times {print "*"}	
-		
-	end
-# system("clear")
-# # (1..4).each do |number|
-# # 	"horse_#{number}"
-# # horse_lap = []
-# # horse_lap.push "*" #add lap
-# # horse_lap.each {|horse_lap| print horse_lap}
-# # horse_4.horse_lap.each {|horse_lap| print horse_lap}
 
-# def race	
-# horse_lap=19	
-# run_race = true
-# horse_winner = WinnerWinner
-# 	puts "Lets get going on a horse race!"; sleep 2
-# 	system("clear")
-# 	puts "The Horses are in the Starting Gate!!"; sleep 1;system("clear")
-# 	puts "Horses to the ready!"; sleep 1;system("clear")
-# 	puts "Their Off!!!"; sleep 1;system("clear")
-# 	if run_race == true
-		
 
+	
+
+		     
+@track_lap = 0
+@run_race = true
+@horse_winner = "start"
+codes = ["gofast","gofaster"] 
+# codes = "gofast" 
+
+
+# => Race Starts here:
+	system("clear")
+	# puts "Lets get going on a horse race!"; sleep 2
+	# system("clear")
+	# puts "The Horses are in the Starting Gate!!"; sleep 1;system("clear")
+	# puts "Horses to the ready!"; sleep 1;system("clear")
+	# puts "Their Off!!!"; sleep 1;system("clear")
+	# puts "The Starting Time is: #{Time.now}"
+	track_1.display_race
+				
+			while @run_race == true
+			# puts "track lap#{@track_lap}"
+			puts "Horse_1: #{horse_1.name}\t Lap: #{(horse_1.horse_lap).times {print "*"}}"
+    	puts "Horse_2: #{horse_2.name}\t Lap: #{(horse_2.horse_lap).times {print "*"}}"
+    	puts "Horse_3: #{horse_3.name}\t Lap: #{(horse_3.horse_lap).times {print "*"}}"
+    	puts "Horse_4: #{horse_4.name}\t Lap: #{(horse_4.horse_lap).times {print "*"}}"
+			# @display_race
+			puts "should have displayed the race/start/finish line too"
+			# puts "The Horses are on Track lap #{@track_lap}"
+			# puts "Remaining Track laps #{(20-@track_lap.to_f)}"
+			puts ''
+			puts "Enter code, word from dictionary!!"
+			puts "enter advancement code to move horse" #
+			
+				@go_no_go = gets.chomp
+					if @go_no_go != codes				
+					 	puts @go_no_go #, sleep 2
+						@track_lap += 1
+						# @horse_lap += 1
+						horse_1.move_horse_lap
+			    	horse_2.move_horse_lap
+				    horse_3.move_horse_lap
+				    horse_4.move_horse_lap
+						system("clear")
+						track_1.check_win								
+
+					else
+						puts "You have successfully entered a winner pass key"; sleep 2# horse_lap += 1
+						track_lap += 1
+						horse_1.horse_lap += 10
+						track_1.check_win 
+					end
+			end	
+	# 	end	
+	# end	
+
+
+				# while run_race == true and track_lap <= 20
+				#        # advance_track_lap (4)
+				#        horse_1.move_horse_lap
+				#        horse_2.move_horse_lap
+				#        horse_3.move_horse_lap
+				#        horse_4.move_horse_lap       
+				# end        
+    
 # 			# Get user input
 # 			# compare the user input to the winner code
 # 			#   if the winner code
@@ -60,41 +91,14 @@ horse_4 = Horse.new("Mad_Meany", "Bad_Guy", 3)
 # 		@horse_name = 'good guy horse'
 # 		@go_no_go = "go"
 # 		@run_race = "y"
-# 		# codes = ["gofast","gofaster"] 
-# 		codes = "gofast" 
 
-# 		def check_win
-# 			if @horse_lap > 20
-# 				@track_lap=0
-# 						system("clear")
-# 						puts "Winner Winner Chicken Dinner"
-# 						puts ''
-# 						puts "Horse: #{@horse_name} is the WINNER!!!"
-# 			end
-# 		end
+		
+
+
+				
+	# end
 					
 	
-# 		while @track_lap != 0
-# 			display_race
-# 			puts "you are on Horse lap #{@horse_lap}"
-# 			puts "remaining Track laps #{@track_lap}"
-# 			puts "Enter code, word from dictionary!!"
-# 			puts "enter advancement code to move horse" #
-# 				@go_no_go = gets.chomp
-# 					if @go_no_go != codes				
-# 					 puts @go_no_go #, sleep 2
-# 						@track_lap -= 1
-# 						@horse_lap += 1
-# 						system("clear")
-# 						check_win								
-
-# 					else
-# 						puts "You have successfully entered a winner pass key"; sleep 2# horse_lap += 1
-# 						track_lap -= 1
-# 						horse_lap += 10
-# 						check_win #system("clear")
-# 					end
-# 		end	
 # 	end
 # end	
 # # puts horse_1.name
