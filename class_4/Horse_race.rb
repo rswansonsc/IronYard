@@ -36,7 +36,6 @@ codes = ["gofast","gofaster"]
 				
 			while @run_race == true
 			# puts "track lap#{@track_lap}"
-			puts "Horse_1: #{horse_1.name}\t Lap: #{(horse_1.horse_lap).times {print "*"}}"
     	puts "Horse_2: #{horse_2.name}\t Lap: #{(horse_2.horse_lap).times {print "*"}}"
     	puts "Horse_3: #{horse_3.name}\t Lap: #{(horse_3.horse_lap).times {print "*"}}"
     	puts "Horse_4: #{horse_4.name}\t Lap: #{(horse_4.horse_lap).times {print "*"}}"
