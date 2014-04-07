@@ -8,6 +8,7 @@ class  Track
   def initialize (name, track_lap)
     @name = name
     @@track_lap = track_lap  
+    @horses = []
 
   end
 
