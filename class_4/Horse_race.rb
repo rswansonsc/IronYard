@@ -46,7 +46,7 @@ codes = ["gofast","gofaster"]
 			# puts "track lap#{@track_lap}"
 			puts "Results of RACE on Track Number ONE"
     	puts "Horse_1: #{track_1.horse_1[:name]}\t Lap: #{(track_1.horse_1[:horse_lap]).times {print "*"}}"
-    	puts "Horse_2: #{track_1.horse2[:name]}\t Lap: #{(track_1.horse_2[:horse_lap]).times {print "*"}}"
+    	puts "Horse_2: #{track_1.horse_2[:name]}\t Lap: #{(track_1.horse_2[:horse_lap]).times {print "*"}}"
     	puts "Horse_3: #{track_1.horse_3[:name]}\t Lap: #{(track_1.horse_3[:horse_lap]).times {print "*"}}"
     	puts "Horse_4: #{horse_4.horse_4[:name]}\t Lap: #{(track_1.horse_4[:horse_lap]).times {print "*"}}"
 			# @display_race
