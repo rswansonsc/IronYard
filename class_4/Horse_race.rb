@@ -10,6 +10,12 @@ horse_3 = Horse.new("Raggy_Runner", "Bad_Guy", 0)
 horse_4 = Horse.new("Mad_Meany", "Bad_Guy", 0)
 
 track_1 = Track.new("Dounty Downs", 0)
+# track_1.add_horse(horse_1)
+# track_1.add_horse(horse_2)
+# track_1.add_horse(horse_3)
+# track_1.add_horse(horse_4)
+# to access the horses:
+# track_1.horses[0], etc.. etc..
 
 # Display horse and lap position
 
