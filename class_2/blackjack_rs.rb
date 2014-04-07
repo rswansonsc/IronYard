@@ -28,29 +28,47 @@ cards_with_dealer.push(get_card)
 @game_on=true
 while @game_on==true
 	card_values = 0
-# - Player gets cards
-Print "Player - You have the following cards"
+		# - Player gets cards
+		Print "Player - You have the following cards"
 
-cards_in_hand.each do |card|
-	print "#{card}"
-	card_values += cards
-	end 
+		cards_in_hand.each do |card|
+			print "#{card}"
+			card_values += cards
+			end 
 
-puts "Card Vaulues: #{card_values}
-puts Do you want to hit Stay?"
+		puts "Card Vaulues: #{card_values}"
+		puts "Does the Player want to Hit(h) or Stay(s)? - please use lower case only"
 
-Hit_or_stay = gets.chomp
-if Hit_or_stay == 'h'
-	cards_in_hand.push(get_card)
-	check_win(card_values)
-if Hit_or_stay == 's'
-	@game_on=false
-	#check win
+		Hit_or_stay = gets.chomp
+		if Hit_or_stay == 'h'
+			cards_in_hand.push(get_card)
+			check_win(card_values)
+		if Hit_or_stay == 's'
+			@game_on=false
+			#check win
+		end
+			
 
 
+		# - Dealer gets Cards
+		system("clear")
+		Print "The Dealer has the following cards"
+		cards_with_dealer.each do |card|
+			print "#{card}"
+			card_values += cards
+			end 
 
-# - Dealer gets Cards
-Print "The Dealer has the following cards"
+		puts "Card Vaulues: #{cards_with_dealer}"
+		puts "Does the Dealer want to Hit(h) or Stay(s)? - please use lower case only"
+
+		Hit_or_stay = gets.chomp
+		if Hit_or_stay == 'h'
+			cards_with_dealer.push(get_card)
+			check_win(card_values)
+		if Hit_or_stay == 's'
+			@game_on=false
+		end	
+
 
 # cards_in_hand.each do |card|
 # 	print "#{card}"

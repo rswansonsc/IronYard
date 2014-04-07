@@ -164,6 +164,48 @@ Another Example:
   The first element is 1
   The array is now [1, "cat", nil]
 
+**** Class ****
+class BookInStock
+	def initialize(isbn, price)
+	@isbn = isbn
+	@price = Float(price) #puts into dollar format
+	end 
+	
+	def to_s #changes the standard message output of puts
+	"ISBN: #{@isbn}, price: #{@price}" 
+	end
+end
+
+b1 = BookInStock.new("isbn1", 3) p b1 #print command is at end outside of parens ()
+Same = 	b1=BooksInStock.new isbn,3
+				p b1
+#combines all commands on one line = cleaner
+
+b2 = BookInStock.new("isbn2", 3.14) p b2
+b3 = BookInStock.new("isbn3", "5.67") p b3
+
+produces:
+#<BookInStock:0x007fac4910f3e0 @isbn="isbn1", @price=3.0>
+#<BookInStock:0x007fac4910f0c0 @isbn="isbn2", @price=3.14>
+#<BookInStock:0x007fac4910eda0 @isbn="isbn3", @price=5.67>
+
+
+puts b4
+produces: #<BooksInStock:0x00000103142518>
+
+Use p to print
+
+Use .to_s #puts to string
+
+
+
+
+
+
+
+
+
+
  **** Yield ****
 
 
