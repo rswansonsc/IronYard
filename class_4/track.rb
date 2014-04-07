@@ -12,9 +12,14 @@ class  Track
 
   end
   #from Nick B.
-  def add_horse(horse)
+  def add_horse(horse_1)
   @horse.push(horse)
   end
+
+  #this is what I had...at bottom
+  # def add_horse(horse)
+  #   @horses.push(horse)
+  # end
   
   def self.track_lap
     @@track_lap = :track_lap
@@ -48,9 +53,7 @@ class  Track
         # system("clear") 
   end 
   
-  def add_horse(horse)
-    @horses.push(horse)
-  end
+ 
 
   def annouce_winner
   @track_lap=20

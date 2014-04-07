@@ -1,7 +1,7 @@
 class Horse	
 
   @@horse = name
-  @@breed = breed
+  # @@breed = breed
   @@horse_lap = 0
   
   attr_accessor :name, :breed, :horse_lap 
@@ -26,7 +26,6 @@ class Horse
   
   def move_horse_lap
     @@horse_lap += rand(1..4)
-    
   end
 
 end

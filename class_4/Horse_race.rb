@@ -40,11 +40,12 @@ codes = ["gofast","gofaster"]
 	# puts "Horses to the ready!"; sleep 1;system("clear")
 	# puts "Their Off!!!"; sleep 1;system("clear")
 	# puts "The Starting Time is: #{Time.now}"
-	track_1.display_race
+	track_1.display_race #this will display track_1 race
 				
 			while @run_race == true
 			# puts "track lap#{@track_lap}"
-			puts "Results of RACE on Track Number ONE"
+			puts "Results of RACE on Track Number ONE" #this line needs to change to match track_X
+    	# puts "Horse_1: #{track_1.horse_1[:name]}\t Lap: #{(track_1.horse_1[:horse_lap]).times {print "*"}}"
     	puts "Horse_1: #{track_1.horse_1[:name]}\t Lap: #{(track_1.horse_1[:horse_lap]).times {print "*"}}"
     	puts "Horse_2: #{track_1.horse_2[:name]}\t Lap: #{(track_1.horse_2[:horse_lap]).times {print "*"}}"
     	puts "Horse_3: #{track_1.horse_3[:name]}\t Lap: #{(track_1.horse_3[:horse_lap]).times {print "*"}}"
