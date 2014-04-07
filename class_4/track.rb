@@ -3,7 +3,7 @@ class  Track
   @@track_lap = 0
   @horse_winner = "start"
   # @@track_winner = false
-  attr_accessor :name, :track_lap
+  attr_accessor :name, :track_lap, :horses
 
   def initialize (name, track_lap)
     @name = name
@@ -45,6 +45,10 @@ class  Track
         if horse_4.horse_lap >= 20 then @horse_winner = horse_3.name; end 
         # system("clear") 
   end 
+  
+  def add_horse(horse)
+    @horses.push(horse)
+  end
 
   def annouce_winner
   @track_lap=20
