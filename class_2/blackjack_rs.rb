@@ -15,16 +15,12 @@ def check_win(cards)
 	elsif cards == 21
 		puts "WINNER - WINNER CHICKEN DINNER"
 		@game_on=false
-	end
 end
 
 	
 cards_with_dealer = []
 cards_in_hand = []
-cards_in_hand.push(get_card)
-cards_in_hand.push(get_card)
-cards_with_dealer.push(get_card)
-cards_with_dealer.push(get_card)
+
 # cards_in_hand.each do |card|
 # a = "hello #{'dog' if b=="Joshua"}"
 
@@ -32,6 +28,8 @@ cards_with_dealer.push(get_card)
 while @game_on==true
 	card_values = 0
 		# - Player gets cards
+		cards_in_hand.push(get_card)
+		cards_in_hand.push(get_card)
 		Print "Player - You have the following cards"
 
 		cards_in_hand.each do |card|
@@ -56,8 +54,8 @@ while @game_on==true
 		# - Dealer gets Cards
 		system("clear")
 		
-		cards_with_dealer.push(rand(1..11))
-		cards_with_dealer.push(rand(1..11))
+		cards_with_dealer.push(get_card)
+		cards_with_dealer.push(get_card)
 		puts "The Dealer has the following cards"
 		puts
 
