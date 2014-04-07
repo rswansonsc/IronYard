@@ -40,6 +40,29 @@ c
 # print an array using the .each loop
 horse_2.horse_lap.each {|horse_lap| print horse_lap}
 
+Arrays have a large number of other useful methods. Using them, you can treat arrays as stacks, sets, queues, dequeues, and FIFO queues.
+For example, push and pop add and remove elements from the end of an array, so you can use the array as a stack:
+stack = []
+stack.push "red"
+stack.push "green"
+stack.push "blue"
+stack # => ["red", "green", "blue"]
+stack.pop # => "blue" stack.pop # => "green" 
+stack.pop # => "red" stack #=>[]
+
+Similarly, unshift and shift add and remove elements from the head of an array. Combine shift and push, and you have a first-­‐‑in first-­‐‑out (FIFO) queue.
+
+queue = []
+queue.push "red" 
+queue.push "green" 
+queue.shift # => "red" 
+queue.shift # => "green"
+The first and last methods return (but don’t remove) the n entries at the head or end of an array.
+array = [ 1, 2, 3, 4, 5, 6, 7 ] 
+array.first(4) # => [1, 2, 3, 4] 
+array.last(4) # => [4, 5, 6, 7]
+
+
 **** Hashes ****
 For example, you could use a hash to map musical instruments to their orchestral sections.
 
@@ -170,7 +193,7 @@ class BookInStock
 	@isbn = isbn
 	@price = Float(price) #puts into dollar format
 	end 
-	
+
 	def to_s #changes the standard message output of puts
 	"ISBN: #{@isbn}, price: #{@price}" 
 	end

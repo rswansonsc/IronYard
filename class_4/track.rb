@@ -11,10 +11,11 @@ class  Track
     @horses = []
 
   end
-
-  # def add_horse(horse)
-  #   @horse.push(horse)
-  # end
+  #from Nick B.
+  def add_horse(horse)
+  @horse.push(horse)
+  end
+  
   def self.track_lap
     @@track_lap = :track_lap
   end

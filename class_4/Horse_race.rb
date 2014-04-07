@@ -10,10 +10,12 @@ horse_3 = Horse.new("Raggy_Runner", "Bad_Guy", 0)
 horse_4 = Horse.new("Mad_Meany", "Bad_Guy", 0)
 
 track_1 = Track.new("Dounty Downs", 0)
-# track_1.add_horse(horse_1)
-# track_1.add_horse(horse_2)
-# track_1.add_horse(horse_3)
-# track_1.add_horse(horse_4)
+
+#from Nick B.
+track_1.add_horse(horse_1)
+track_1.add_horse(horse_2)
+track_1.add_horse(horse_3)
+track_1.add_horse(horse_4)
 # to access the horses:
 # track_1.horses[0], etc.. etc..
 
@@ -42,9 +44,11 @@ codes = ["gofast","gofaster"]
 				
 			while @run_race == true
 			# puts "track lap#{@track_lap}"
-    	puts "Horse_2: #{horse_2.name}\t Lap: #{(horse_2.horse_lap).times {print "*"}}"
-    	puts "Horse_3: #{horse_3.name}\t Lap: #{(horse_3.horse_lap).times {print "*"}}"
-    	puts "Horse_4: #{horse_4.name}\t Lap: #{(horse_4.horse_lap).times {print "*"}}"
+			puts "Results of RACE on Track Number ONE"
+    	puts "Horse_1: #{track_1.horse_1[:name]}\t Lap: #{(track_1.horse_1[:horse_lap]).times {print "*"}}"
+    	puts "Horse_2: #{track_1.horse2[:name]}\t Lap: #{(track_1.horse_2[:horse_lap]).times {print "*"}}"
+    	puts "Horse_3: #{track_1.horse_3[:name]}\t Lap: #{(track_1.horse_3[:horse_lap]).times {print "*"}}"
+    	puts "Horse_4: #{horse_4.horse_4[:name]}\t Lap: #{(track_1.horse_4[:horse_lap]).times {print "*"}}"
 			# @display_race
 			puts "should have displayed the race/start/finish line too"
 			# puts "The Horses are on Track lap #{@track_lap}"

@@ -8,10 +8,13 @@ def get_card #parameter is anything passed inside a function
 end
 
 def check_win(cards)
+	puts "running check_win routine"
 	if cards > 21 
-		puts "BUST"
+		puts "BUST - You Loose! "
+		@game_on=false
 	elsif cards == 21
-		puts "WIN"
+		puts "WINNER - WINNER CHICKEN DINNER"
+		@game_on=false
 	end
 end
 
@@ -45,41 +48,31 @@ while @game_on==true
 			check_win(card_values)
 		if Hit_or_stay == 's'
 			@game_on=false
-			#check win
+			check win
 		end
 			
 
 
 		# - Dealer gets Cards
 		system("clear")
-		Print "The Dealer has the following cards"
-		cards_with_dealer.each do |card|
-			print "#{card}"
-			card_values += cards
-			end 
+		
+		cards_with_dealer.push(rand(1..11))
+		cards_with_dealer.push(rand(1..11))
+		puts "The Dealer has the following cards"
+		puts
 
-		puts "Card Vaulues: #{cards_with_dealer}"
-		puts "Does the Dealer want to Hit(h) or Stay(s)? - please use lower case only"
+		# cards_with_dealer.each do |card|
+		# 	print "#{card}"
+		# 	card_values += cards
+		# 	end 
 
-		Hit_or_stay = gets.chomp
-		if Hit_or_stay == 'h'
-			cards_with_dealer.push(get_card)
-			check_win(card_values)
-		if Hit_or_stay == 's'
-			@game_on=false
-		end	
+		# puts "Card Vaulues: #{cards_with_dealer}"
+		# puts "Does the Dealer want to Hit(h) or Stay(s)? - please use lower case only"
 
-
-# cards_in_hand.each do |card|
-# 	print "#{card}"
-# 	card_values += cards
-# 	end 
-#decicde to hit or stay
-# Hit
-# => i get an additonal card
-# Stay
-# => do not get an additional card
-#check to see if I win
-# => if my cards are 21 or more 
-# => if my cards are less than 21 I can take another card
-
+		# Hit_or_stay = gets.chomp
+		# if Hit_or_stay == 'h'
+		# 	cards_with_dealer.push(get_card)
+		# 	# check_win(card_values)
+		# if Hit_or_stay == 's'
+			# @game_on=false
+			# check_win
