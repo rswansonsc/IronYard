@@ -1,0 +1,170 @@
+* {
+	vertical-align: top;
+}
+a{
+	text-decoration: none;
+}
+body{
+	/*background-color: white;*/
+	min-height: 1500px;
+	min-width: 1300px;
+
+}
+.banner {
+	width: 1300px;
+	height: 500px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.banner-top-left{
+	width: 300px;
+	height: 50px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	border: 1px dashed black;
+	display: inline-block;
+}
+
+.banner-top-right{
+	width: 150px;
+	height: 50px;
+	position: relative;
+	display: inline-block;
+	margin-left: 534px;
+	top: 0px;
+	right: 0px;
+	border: 1px dashed red;
+	
+}
+
+.container{
+	width: 1000px;
+	/*960px is the width of the page*/
+	height: 1500px;
+	margin: 0 auto;
+	border: 1px solid blue;
+}
+
+.left-column{
+	width: 700px;
+	height: 1000px;
+	margin-top: 500px;
+	background-color: yellow;
+	/*border: 1px dashed black;*/
+	display: inline-block;
+}
+
+.right-column{
+	width: 290px;
+	height: 1000px;
+	margin-top: 500px;
+	border: 1px dashed black;
+	display: inline-block;
+	margin-right: 0px;
+	/*margin-left: 534px;*/
+}
+.right-img {
+	width: 240px;
+	height: 180px;
+	margin: 0 auto;
+	border: 1px solid red;
+
+/*border-radius: 5px
+this is for a circle, make border at least the width or the height*/
+	/*be sure to match the area that the image will lineup*/
+}
+
+.cool-img {
+	width: 180px;
+	height: 180px;
+	border-radius: 90px;
+	border: 2px solid red;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.footer{
+	width: 1000px;
+	height: 150px;
+	margin: 0 auto;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border: 2px dashed black;
+}
+
+/*.left-column{
+	width: 400px;
+	height: 100%;
+	margin-top: 500px;
+	margin-right: 75px;
+	position: relative;
+	border: 3px dashed black;
+}*/
+/*	position: relative;
+	top: 5px;
+	left: 5px;*/
+	/*border: 1px dashed white;*/
+	/*
+	relative - to containing element
+	absolute - does not care about other elements
+
+		*/
+
+/*.right-column{
+	width: 400px;
+	height: 2000px;
+	margin-left: 75px;
+	border: 3px dashed blue;
+	display: inline-block;
+	/*position: relative;*/
+/*}
+*/
+
+
+/*.top-right {
+	position: absolute;
+	top: -90px;
+	right: -90px;
+}
+
+.top-left {
+	position: absolute;
+	top: -90px;
+	right: -90px;
+}
+*/
+
+	/*position abolute */
+/*match width/height to give circle, then apply the radius as border to mask a circle, use 90px because 360px/4 = 90px*/
+
+
+/*.banner-img {
+	position: absolute;
+	width: 100%;
+	height: 25%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	/*banner will push at top,
+
+}*/
+
+/*.vader {
+	width: 100%;
+	height: 25%;
+	position: absolute
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	/*banner will push at top,
+
+	position abolute 
+	and left/right will wright over entire page*/

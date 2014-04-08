@@ -1,0 +1,69 @@
+body {
+	font-family: Exo, sans-serif;
+
+}
+
+h1{
+	text-shadow: 1px 1px 2px #03f;
+	color: yellow;
+}
+
+h2{font-family: sans-serif;
+}
+
+h1:first-letter{
+	font-size: 100px;
+}
+.link{
+	text-decoration: underline;
+}
+.link:active{
+	color: blue;
+}
+.link:visited{
+	color: green;
+}
+.link:hover{
+	text-decoration: bold;
+	color: red;
+}
+.box1{
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+}
+.white {
+	background-color: white !important; 
+
+}
+
+.inner-div{
+
+}
+
+.box {
+	width: 300px;
+	height: 300px;
+	background-color: #ccc;
+	position: relative;
+
+	/*box-shadow: inset 1px 1px 3px black;*/
+	/*box-shadow: 1px 1px 3px black;*/
+}
+
+.box img{
+width: 100%;
+height: 100%;
+position: relative;
+}
+
+.overlay{
+background-color: #035;
+position: absolute;
+top: 0;
+bottom: 0;
+right: 0
+left: 0;
+z-index: 99;
+
+}
