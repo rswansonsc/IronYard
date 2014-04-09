@@ -176,7 +176,7 @@
 		position: absolute;
 		/*font-size: 15px;*/
 		color: black;
-		border: 1px dashed black;
+		/*border: 1px dashed black;*/
 		margin-left: 0px;
 		/*margin-top: 100px;*/
 		padding-right: 30px;	
@@ -218,7 +218,9 @@
 		border-radius: 50%;
 	}
 	/**** FOOTER SECTION ****/
-
+	.footer-text{
+		border-left: 1px white;
+	}
 	.footer{
 		height: 150px;
 		width: 1000px;

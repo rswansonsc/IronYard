@@ -1,0 +1,3 @@
+.DS_Store
+## class_1/*, - this will ignore all files in the class_1
+koans/*
