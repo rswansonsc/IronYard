@@ -1,0 +1,33 @@
+Sinatra:
+1. Simple web tool to perform local development
+2. Must load server.rb, Gemfile, in same dir
+3. The Gemfile is case sensitive
+4. All erb files go into the /Views folder
+
+	Note: Github has a file ".gitignore", this file should be placed in the Master Root folder of your GitRepository locally to block some directories from being pushed to github, specifically block
+
+
+
+
+
+
+
+
+
+
+
+
+A simple way to see what is being passed in the params variable in the request is to put something like:
+
+#app.rb
+before do
+  puts '[Params]'
+  p params
+end
+Then you can see in the terminal what is being passed.
+
+also try this to see params if using hash:
+post '/post' do
+  body = params[:message]
+  erb :post
+end

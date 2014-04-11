@@ -1,0 +1,6 @@
+rvm 2.1@sinatra --create
+#rvm 2.1@oogabooga --create
+
+gem 'sinatra'
+gem 'faker'
+gem 'shotgun'

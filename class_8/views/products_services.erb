@@ -1,0 +1,18 @@
+
+
+<h1>Products & Services</h1>
+<h3>Most recent satisfied Clients:</h3>
+
+<!-- <h1><%= @name %></h1> <h2><%= @company %></h2>
+ -->
+
+
+
+
+<ul>
+<% @happy_client.each do |client| %>
+  <li>
+  	Name: <%= client[:person_name] %> 	City: <%= client[:person_city] %> State:<%= client[:person_state] %>
+  </li> 
+<% end %>
+</ul>

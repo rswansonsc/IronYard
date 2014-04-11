@@ -1,0 +1,53 @@
+#each gemset has specific dependancies
+#rvm = Ruby Version Manager
+
+rvm list
+-displays current version
+rvm gemset list
+
+rvm gemset use "sinatra"
+-sets the gemset that you will be using
+rvm gemset delete asdf
+
+View Processes running:
+ps ax | grep ruby
+kill xxxx (where xxxx is the process id to kill)
+
+------------------------ file: .rvmrc
+*option#1:
+rvm use 2.1
+rvm gemset use sinatra
+
+*option#2 (better way to load)
+rvm 2.1@sinatra 
+-this command is the same as entering the
+above two commands
+
+#each project has a config file
+#touch .rvmrc (create the file)
+#the .rvmrc file will contain info like:
+#the .rvmrc = holds the alias for your project
+#the --create will force gem set created if it does not exist
+#the gem files must be listed in order for the project
+
+rvm 2.1@sinatra --create (only line needed in .rvmrc)
+
+#each project has a Gemfile that must be bundled 
+#each named_file.rb has a Gemfile & .rvmrc files 
+# are located in project \root folder
+
+-.rvmrc
+rvm 2.1@oogabooga --create
+
+------------------------ file: Gemfile
+-Gemfile
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'faker'
+gem 'shotgun'
+
+-Shotgun -p 4567 name_file.rb
+#gem must be installed: 
+
+
+
