@@ -1,7 +1,10 @@
 .DS_Store
 ## class_1/*, - this will ignore all files in the class_1
 ## koans/* - will ignore all the files in the specified dir
-sinatra/*
-Nick_sinatra/*
+
+book-txt-speech/*
 koans/*
 Class_test/*
+lab1/*
+Nick_sinatra/*
+sinatra/*

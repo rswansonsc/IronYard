@@ -1,5 +1,13 @@
+
+
+
 cat xxxx (show contents of a file)
 
 ls 		(list directory contents)
 mkdir (make a directory below your current location)
 cd .. (back up one level on the directory)
+
+to reload your alias list in terminal type:
+source ~/.bash_profile
+
+

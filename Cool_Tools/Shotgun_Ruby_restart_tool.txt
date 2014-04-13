@@ -1,3 +1,0 @@
-Shotgun is a tool to auto restart Safari:
-http://ruby.about.com/od/sinatra/a/sinatra5.htm
-

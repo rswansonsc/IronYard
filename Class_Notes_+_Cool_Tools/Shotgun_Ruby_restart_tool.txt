@@ -1,0 +1,5 @@
+Shotgun is a tool to auto restart Safari:
+http://ruby.about.com/od/sinatra/a/sinatra5.htm
+
+I am using ohmyzshell and there is a problem with the Shotgun runing 
+with ohmyzshell...on the list of stuff to figure out.  I did look at GitHub and there are other folks with issues with ohmyzshell so I will just have to grind through what is wrong
