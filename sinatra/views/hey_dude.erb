@@ -1,0 +1,20 @@
+<html>
+<head>
+  <title>Hey dude title</title>
+</head>
+<body>
+  Hey more dude text.
+  <%= @instance %>
+  <% if @instance == "Instance" %>
+    Dude man. Dude's all over.
+  <% else %>
+    Where did hte dudes go?
+  <% end %>
+  <br>
+  <% @instance2.each do |name| %>
+    <%= name %>
+    <hr>
+  <% end  %>
+
+</body>
+</html>
