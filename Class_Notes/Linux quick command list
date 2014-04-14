@@ -4,6 +4,7 @@
 cat xxxx (show contents of a file)
 
 ls 		(list directory contents)
+ls -al (lists director contents plus hidden)
 mkdir (make a directory below your current location)
 cd .. (back up one level on the directory)
 
