@@ -1,4 +1,4 @@
-Sinatra:
+Sinatra: (local web development platform to test web sites)
 1. Simple web tool to perform local development
 2. Must load server.rb, Gemfile, in same dir
 3. The Gemfile is case sensitive
@@ -7,9 +7,50 @@ Sinatra:
 	Note: Github has a file ".gitignore", this file should be placed in the Master Root folder of your GitRepository locally to block some directories from being pushed to github, specifically block
 
 
+* erb files go into the \views
+Faker: (faked database you can do calls against)
+
+
+* server.rb file launched with "ruby server.rb", 
+* Gemfiles must be present
+* htm files go into  \pubic
+* css files go into  \public\css 
+
+in Gemfile:
+source 'https://rubygems.org'
+gem 'sinatra'
+gem 'faker'
 
 
 
+in erb file: "home"
+
+
+
+
+
+in html file: "index.htm"
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<head>
+	<title>Herb Factory</title>
+</head>
+
+<body>
+	<h1>Herb Factory</h1></a></div>
+	Navigation: 
+	<a href="/home">Home</a> -- 
+	<a href="/about_us">About Us</a> -- 
+	<a href="/products">Products & Services</a>
+	
+	<%= yield %>
+
+</div>
+
+
+
+</body>
+</html>
 
 
 

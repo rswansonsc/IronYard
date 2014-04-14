@@ -20,9 +20,9 @@
 	.underline{
 		text-decoration: underline;
 	}
-	a{
+	/*a{
 	  text-decoration: bold;
-	}
+	}*/
 
 	a:hover {
 	  text-decoration: underline;
@@ -145,7 +145,7 @@
 	}
 	/**** TEXT COLUMN SECTION ****/
 	.shadow{
-		/*box-shadow: 1px 1px 2px #ccc;*/
+		box-shadow: 1px 1px 2px #ccc;
 
 	}
 
@@ -187,21 +187,54 @@
 	width: 319px;
 	height: 94px;
 	position: relative;
-	border: 1px dashed red;
+	/*border: 1px dashed red;*/
 	}
 
 	.rc-sbox{
 		width: 50px;
 		height: 20px;
 		background-color: white;
+		margin-left: 0px;
+		border: 1px dashed red;
 	}
-	.rc-box2{
+	.buttons-bottom{
+		width: 100%;
+		height: 20px;
+		position: relative;
+		/*margin: auto;*/
+		border: 1px dashed blue;
+	}
+	.foot-box1{
 		width: 50px;
 		height: 20px;
-		margin-top: 0px;
+		/*margin-top: 0px;*/
 		margin-left: 0px;
+		/*margin-bottom: -14px;*/
 		background-color: white;
+		border: 1px dashed blue;
 	}
+	.foot-box2{
+		width: 50px;
+		height: 20px;
+		margin-top: -23px;
+		margin-left: 52px;
+		/*margin-bottom: 0px;*/
+		/*position: bottom -14px;*/
+		background-color: white;
+		border: 1px dashed blue;
+	}
+	.foot-box3{
+		width: 50px;
+		height: 20px;
+		margin-top: -23px;
+		position: relative;
+		/*margin-bottom: -14px;*/
+		/*margin-top: 0px;*/
+		margin-left: 104px;
+		background-color: white;
+		border: 1px dashed blue;
+	}
+	
 	.cool-img {
 		width: 50px;
 		height: 50px;
@@ -218,13 +251,68 @@
 		border-radius: 50%;
 	}
 	/**** FOOTER SECTION ****/
-	.footer-text{
-		border-left: 1px white;
-	}
+	
 	.footer{
-		height: 150px;
+		height: 82px;
 		width: 1000px;
 		position: relative;
-		background-color: #689DD9;
+		margin: 0 auto;
+		background-color: #ccc;
+		border: 1px dashed red;
+	}
+	.footer-right-image{
+		width: 96px;
+		height: 83px;
+		position: relative;
+		/*padding-left: 0px;*/
+		margin-left: 0px;
+		border: 1px dashed black;
+	}
+	.footer-text{
+		margin-right: 90px;
+		margin-bottom: 0px;
+		position: relative;
+	}	
+	.buttons-footer{
+		width: 100%;
+		height: 22px;
+		position: relative;
 
+		margin-bottom: 0px;
+		/*margin: auto;*/
+		border: 1px dashed blue;
+	}
+	.footer-box1{
+		width: 50px;
+		height: 20px;
+		position: relative;
+		margin-bottom: 0px;
+		margin-left: 850px;
+		background-color: white;
+		border: 1px dashed blue;
+	}
+	.footer-box2{
+		width: 50px;
+		height: 20px;
+		position: relative;
+		margin-bottom: 0px;
+		margin-left: 900px;
+		margin-top: -23px;
+		
+		background-color: white;
+		border: 1px dashed blue;
+	}
+	.footer-box3{
+		width: 50px;
+		height: 20px;
+		position: relative;
+		margin-bottom: 0px;
+		margin-left: 950px;
+		position: relative;
+		margin-top: -23px;
+		/*margin-bottom: -14px;*/
+		/*margin-top: 0px;*/
+		/*margin-left: 104px;*/
+		background-color: white;
+		border: 1px dashed blue;
 	}

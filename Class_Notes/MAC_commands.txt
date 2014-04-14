@@ -1,0 +1,20 @@
+MAC
+CMD + Spacebar = MAC Spotlight (searches for MAC Program)
+CMD + Shift + 4 = Screen capture to file
+
+
+
+
+Sublime Text 2
+
+CMD + x = cut
+CMD + c = copy
+CMD + v = paste
+CMD + Shift + arrow key(s) = select text
+
+CMD + S = Save
+CMD + OPT + S = Save All
+CMD + W = Closes current editing windows
+
+CMD + / = will cause a comment 
+CMD + OPT + 1 = single screen operation

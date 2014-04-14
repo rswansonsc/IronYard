@@ -1,0 +1,95 @@
+* {
+	vertical-align: top;
+	}
+a{
+	text-decoration: none;
+	}
+body {
+	  font-family: Exo, sans-serif;
+	}
+
+.first-letter{
+	float: left;
+	color: green;
+	font: 72px/100% Georgia, serif;
+	margin: 0 14px 0 0;
+/makes first letter large & green/
+}
+
+.f20 {
+		font-family: Exo, sans-serif;
+		font-size: 20px;
+		color: black;
+	}
+
+.f30 {
+	font-family: Exo, sans-serif;
+	font-size: 30px;
+	color: black;
+	}
+.underline{
+	text-decoration: underline;
+	}
+a:hover {
+  text-decoration: underline;
+  color:red;
+	}
+a:active {
+  color: blue;
+	}
+
+.link:visited {
+  color: green;
+	}
+.tat{
+	text-align: top;
+	}
+.tac{
+	text-align: center;
+	}
+.tar {
+	text-align: right;
+	}
+.tal{
+	text-align: left;
+	}
+.bar-right{
+	border-right: 3px solid #ccc;
+	padding-right: 3px;
+	/*ccc=gray*/
+	}
+.bar-left{
+	border-left: 3px solid #ccc;
+	padding-left: 3px;
+	/*ccc = gray, 000 = black, fff = white*/
+}
+
+.bar-right,.bar-left{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+/banner section/
+.head-banner{
+	width: 100%;
+	height: 500px;
+	position: relative;
+	margin: 0 auto;
+	background-image: url("images/bt.jpg"); 
+	background-size: 100% 100%;
+	background: transparent\9; 
+	/*border: 1px dashed black;*/
+	}
+
+.container{
+	/*background-color: white;*/
+	height: 1500px;
+	width: 1000px;
+	margin: 0 auto;
+	/*background-color: #BEDB7F;*/
+	/*border: 1px dashed red;*/
+	position: relative;
+}
+
+	

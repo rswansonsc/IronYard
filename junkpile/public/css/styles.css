@@ -1,0 +1,55 @@
+* {
+	vertical-align: top;
+}
+a{
+	text-decoration: none;
+	text-decoration: underline;
+	color: blue;
+	color: green;	
+	text-decoration: bold;
+	color: red;
+}
+body{
+	/*background-color: white;*/
+	min-height: 1500px;
+	min-width: 1200px;
+}
+
+
+.container{
+	width: 1000px;
+	/*960px is the width of the page*/
+	min-height: 800px;
+	margin: 0 auto;
+	border: 1px dashed blue;
+}
+
+.header {
+	width: 100%;
+	height: 100px;
+	border: 1px dashed green;
+
+}
+.header-left{
+	width: 50%;
+	height: 300px;
+	margin-left: 0px;
+	border: 1px dashed red;
+
+}
+.header-right{
+	width: 50%;
+	height: 300px;
+	margin-right: 0px;
+	border: 1px dashed purple;
+}
+.box{
+	width: 500px;
+	height: 500px;
+}
+
+.footer{
+	width: 100%;
+	height: 100px;
+	border: 1px dashed black;
+}

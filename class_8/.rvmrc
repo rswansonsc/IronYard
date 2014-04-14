@@ -3,4 +3,3 @@ rvm 2.1@sinatra --create
 
 gem 'sinatra'
 gem 'faker'
-gem 'shotgun'

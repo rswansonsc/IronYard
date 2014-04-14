@@ -9,4 +9,10 @@ Ladson, SC 29456
 <a href="http://www.google.com">Check our our web site</a>
 Satisfied Client list:
 
-
+<ul>
+<% @happy_client.each do |client| %>
+  <li>
+  	Name: <%= client[:person_name] %> 	City: <%= client[:person_city] %> State:<%= client[:person_state] %>
+  </li> 
+<% end %>
+</ul>

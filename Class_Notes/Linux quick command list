@@ -10,4 +10,12 @@ cd .. (back up one level on the directory)
 to reload your alias list in terminal type:
 source ~/.bash_profile
 
+** we built a .bashrc file in class so you would type:
+source ~/.bashrc 
 
+then the alias listed below will run, 
+tiy "the iron yard" will kick off the alias
+sub "the Sublime Text 2" editor will kick off using alias
+
+alias sub='open -a "Sublime Text 2"'
+alias tiy='open -a "Sublime Text 2" ~/ironyard'
