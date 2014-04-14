@@ -18,3 +18,9 @@ CMD + W = Closes current editing windows
 
 CMD + / = will cause a comment 
 CMD + OPT + 1 = single screen operation
+
+
+Find and fix errors:
+CMD + f = find (search string will pop up on bottom of screen)
+CMD + g = find next occurance (uses same search string across bottom of screen)
+CMD + OPT + F = find across multiple files (be careful with this one)
