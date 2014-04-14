@@ -92,4 +92,8 @@ a:active {
 	position: relative;
 }
 
-	
+/in the html use: below line/
+/<input type="text" placeholder="search here..."/
+::-webkit-input-placeholder{
+	color: blue
+}

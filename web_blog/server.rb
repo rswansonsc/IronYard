@@ -5,33 +5,21 @@ require 'faker'
 get '/' do
 	erb :home, layout: :index
 end
-
+get '/about' do
+	erb :about, layout: :index
+end
+get '/blog' do
+	erb :blog, layout: :index
+end
+get '/contact' do
+	erb :contact, layout: :index
+end
 get '/home' do
   erb :home, layout: :index
 end
-
-get '/products' do
-
-@happy_client = []
-10.times do
-	@happy_client.push(
-{person_name:             Faker::Name.name,
-person_email:            Faker::Internet.email,
-person_company:          Faker::Company.name,
-person_company_slogan:   Faker::Company.bs,
-person_phone:            Faker::PhoneNumber.phone_number,
-person_address:          Faker::Address.street_address,
-person_city:             Faker::Address.city,
-person_state:            Faker::Address.state,
-person_zip:              Faker::Address.zip_code})
+get '/other' do
+	erb :other, layout: :index
 end
-
-  erb :products_services, layout: :index
-
-
-end
-
-get '/about_us' do
-
-	erb :about_us, layout: :index
+get '/services' do
+  erb :services, layout: :index
 end
