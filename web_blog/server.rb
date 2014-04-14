@@ -3,23 +3,20 @@ require 'faker'
 
 
 get '/' do
-	erb :home, layout: :index
+	erb :index, layout: :index
 end
 get '/about' do
-	erb :about, layout: :index
+	erb :about, layout: :about
 end
 get '/blog' do
-	erb :blog, layout: :index
+	erb :blog, layout: :blog-home-1
 end
-get '/contact' do
-	erb :contact, layout: :index
-end
-get '/home' do
-  erb :home, layout: :index
+get '/index' do
+  erb :index, layout: :index
 end
 get '/other' do
-	erb :other, layout: :index
+	erb :other, layout: :full-width
 end
 get '/services' do
-  erb :services, layout: :index
+  erb :services, layout: :services
 end
