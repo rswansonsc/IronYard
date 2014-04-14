@@ -1,0 +1,96 @@
+Notes to Setup mysql
+
+
+
+To connect:
+    mysql -uroot
+
+To have launchd start mysql at login:
+    ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents
+Then to load mysql now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
+Or, if you don't want/need launchctl, you can just run:
+    mysql.server start
+
+
+When you make a new project you make a new gem set
+1. create folder to run in
+
+2. create a .rvmrc file in the folder using the command "touch .rvmrc"
+2a. edit the .rvmrc with the following
+	rvm 2.1@persons --create
+command "touch "
+
+3. create a Gemfile in the folder using the command "touch Gemfile"
+3a. be sure this info in your Gemfile
+	source 'https://rubygems.org'
+	gem	'sinatra'
+	gem 'mysql'
+	gem 'data_mapper'
+	gem 'tux'
+	gem 'dm-mysql-adapter'
+	gem 'shotgun'
+3b. leave the directory and then go back in to establish the .rvmrc "answer Y for yes" 
+
+4. run the bundle command 
+*Don't skip step 3b.
+bunle install (command to run after you have updated the Gemfile, app.rb, config.ru, .rvmrc)
+-if you have a problem with the bundle command you can delete the Gemfile.lock and re-run the 
+"bundle install" command
+
+5. you need to have the config.ru so create
+config.ru #this is a config file that is used by a lot of deployment tools (tux, Heroku, shotgun)
+	require './app'
+	run Sinatra::Application
+
+
+	Commands:
+	
+	#this is called a block, 
+	get '/' do 
+	end
+
+	get '/' do
+
+6. You need to create a table in "Sequl Pro" called "people" for this exercise
+
+7. Start sinatra by issuing a shotgun command
+7a. be sure you have put the following in the config.ru
+		require './app'
+		run Sinatra::Application
+
+8. view data in the "Sequl Pro"
+
+
+app.rb
+	DataMapper:
+	rftg: datamapper 
+
+	in the app.rb file:
+	require 'data_mapper'
+
+
+DataMapper.setup(
+	:default,
+	'mysql://root@localhost/people'
+	)
+# 'mysql://root:password_goes_here@localhost/people'
+
+
+
+
+
+
+
+new stuff:
+put params
+post '/create_person' do
+	# put parms
+
+	# @person = Person.create parms [:person]
+	# the line above combines lower two lines
+	@person = Person.new params[:person]
+	@person.save
+
+	redirect to('/')
+end

@@ -1,0 +1,34 @@
+<h1>This is a list of people</h1>
+
+<!-- <%= erb :person %> you can put this above or below the 'do' loop and will render the information from the person.erb file on that spot
+* this is considered a partial rendering instance variable
+-->
+
+<% @people.each do |person| %>
+	<% = person.id %>
+	<% = person.first_name %>
+	<% = person.last_name %>
+	<a href="/edit_person/<%person.id%>>">Edit</a>
+	<br>
+	<% end %>
+
+<form>
+	<label>First Name
+	<input text="text" name="person[first_name]">
+	</label>
+	<br>
+
+	<label>Last Name
+	<input text="text" name="person[last_name]">
+	</label>
+	<br>
+
+	<input type="submit" value="Create Person">
+</form>
+
+
+
+
+
+
+	<a href="/create_person">Create Person</a>

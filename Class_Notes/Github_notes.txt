@@ -1,0 +1,49 @@
+Git process:
+
+git add .
+git commit -am "updates for week"
+git pull origin master
+git push origin master
+
+git status 
+-will tell you what is going on, follow the notes
+
+FYI - GitHub is prepping for 2.0 update
+if you get an error then 
+rftm "read the friggin monitor"
+- the new command is going to be 
+- git add -A (case senstive entries)
+to clone another user:
+* This if for Nick our instructor *
+git clone https://github.com/nbucciarelli/TheIronYard.git ~/nbuccdiarelli_git
+
+to clone another user, 
+- go to https://github.com
+- open the repository and look for the link on bottom right and copy that info to paste behing the "git clone" command
+- enter the command:
+git clone "gitusr" ~/name_where_repository_sits
+
+if there is a change that is on the web it could cause you a problem where you are behind what is current on the web
+.in example
+	- changed a file on the web, like a readme.md
+	- your web is now out of sync
+
+to get this resolved 
+you should add 
+
+vi editor: will open when you do a pull 
+	- the vi editor expects you to make a comment
+	- you will make a comment then issue
+	- enter the follow keys
+	"esc" then 
+	":"" and then 
+	"q" to exit out of vi editor
+
+
+to change the editor:
+sub ~/.gitconfig (to edit gitconfig with Sublime)
+
+add this to the user section in your ~/.gitconfig
+
+[user]
+	editor = "Sublime Text 2"

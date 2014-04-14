@@ -1,0 +1,23 @@
+<h1>Edit Person</h1>
+
+<a href="/">Home</a>
+
+<form action="/edit_person/ <%=@person.id%>" method="put">
+	<!-- dont forget this line "hidden" -->
+	<input type="hidden" name="_method" value="put">
+	<label>First Name
+	<input text="text" name="person[first_name]" placeholder="<%=@person.first_name%>">
+	</label>
+	<br>
+	
+	<label>Last Name
+	<input text="text" name="person[last_name]"placeholder="<%=@person.last_name%>">
+	</label>
+	<br>
+	
+	<input type="submit" value="Edit Person">
+
+
+</form>
+
+#forms only like 
