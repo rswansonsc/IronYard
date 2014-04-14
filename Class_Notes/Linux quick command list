@@ -20,3 +20,14 @@ sub "the Sublime Text 2" editor will kick off using alias
 
 alias sub='open -a "Sublime Text 2"'
 alias tiy='open -a "Sublime Text 2" ~/ironyard'
+alias nick='open -a ""Sublime Text 2" ~/nbuccdiarelli_git"
+
+Note: If you ~/.bashrc does not run you will need to change 
+a file called ~/.bash_profile
+
+Here is a note from Stackoverflow.com:
+Terminal opens a login shell. This means, ~/.bash_profile will get executed, ~/.bashrc not. The solution on most systems is to „require“ the ~/.bashrc in the ~/.bash_profile: 
+
+- just put this snippet in your ~/.bash_profile file
+[[ -s ~/.bashrc ]] && source ~/.bashrc
+
