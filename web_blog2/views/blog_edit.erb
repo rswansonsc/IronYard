@@ -1,0 +1,19 @@
+<form action="/edit_blog/<%= @blog.id %>" method="post">
+  <!-- Don't forget this for any method other than post! -->
+  <input type="hidden" name="_method" value="put">
+  <label>Blog Date
+    <input type="text" name="blog[blog_date]" placeholder="<%= @blog.blog_date %>"> 
+  </label>
+  <br>
+  <label>Blog Time
+    <input type="text" name="blog[blog_name]" placeholder="<%= @blog.blog_name %>"> 
+  </label>
+  <br>
+  <label>Content
+    <input type="text" name="blog[blog_name]" placeholder="<%= @blog.blog_name %>"> 
+  </label>
+  <br>
+  <input type="submit" value="Edit Blog">
+
+</form>
+<a href="/">Home</a>

@@ -1,0 +1,21 @@
+<h1>This is the blog erb file</h1>
+
+<nav>
+<a href=""></a>
+</nav>
+
+<% @blog.each do |blog| %>
+  <%= blog.id %>
+  <%= blog.first_name %>
+  <%= blog.last_name %>
+  <%= blog.first_name %>
+  
+  <a href="/blog_edit/<%= blog.id %>">Edit</a>
+  <br>
+  <form action="/delete_blog/<%= blog.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+  </form>
+<% end %>
+
+<a href="/blog_create">Create Blog</a>
