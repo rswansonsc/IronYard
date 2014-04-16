@@ -6,6 +6,7 @@ DataMapper.setup(
 	:default,
 	'mysql://root@localhost/people'
 	)
+# => You must create your database in the mysql of "people" for the data tables to reside
 # 'mysql://root:password_goes_here@localhost/people'
 
 #Model

@@ -2,8 +2,9 @@ Git process:
 
 git add .
 git commit -am "updates for week"
-git pull origin master
-git push origin master
+git push origin master (used to push updates from your local master to GitHub)
+
+git pull origin master (used to update a repository that you have cloned)
 
 git status 
 -will tell you what is going on, follow the notes
