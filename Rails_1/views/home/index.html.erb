@@ -1,0 +1,33 @@
+<h4>These Guys are in the Queue</h4>
+
+<ul>
+<% @people_in_que.each do |person| %>
+
+	<li>
+		<% person.name %>
+		<% person.create_at.strftime("%m/%d/%y %l:%M") %>
+		
+		<% link_to "Show", que_path(person)%>
+		<!-- 
+		same as above line
+		<a href="/ques/<%= person.id%>">Show</a> -->
+		<% link_to "Edit", edit_que_path(person)%>
+		<!-- this is a ruby-izm -->
+		<% link_to "Delete", edit_que_path(person), method: :delete %>
+
+	</li>			
+	<%end%>
+
+</ul>
+
+
+
+<ul>
+<li>Person Name 1</li>
+<!-- 
+<li>Person Name 2</li>
+<li>Person Name 3</li>
+<li>Person Name 4</li>
+<li>Person Name 5</li>
+ --></ul>
+

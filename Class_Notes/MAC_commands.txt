@@ -18,6 +18,8 @@ CMD + W = Closes current editing windows
 
 CMD + / = will cause a comment 
 CMD + OPT + 1 = single screen operation
+CMD + OPT + 2 = dual screen operation
+CMD + OPT + 3 = three screen operation
 
 
 Find and fix errors:

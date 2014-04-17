@@ -1,0 +1,36 @@
+sign up on web site: 
+https://twitter.com/signup
+
+see how they do it.
+
+you can get ideas from searhing on google 
+"rails sexy vailidation"
+
+thelucid.com - a good source to look at
+
+at top of articles_controller.rb
+
+*** get from Nick notes:
+class ArticlesController < ApplicationController
+validates :name, presence; true
+validates :address, presence; true
+
+
+def create
+@rolodex = Rolodex.new 
+local variable
+flash [:notice] = "you were able to successfully able to -----"
+redirect_to root_path
+
+flash [:error] 
+
+to see errors use in Rails Console
+@rolodex.errors
+
+*** get from Nick notes: rolodex/views/layout/_error_messages.html.erb
+
+setup a do loop to display messages:
+@rolodex.errors.messages.each do |k, v|
+<%= k %>
+<%= v %>
+

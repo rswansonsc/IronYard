@@ -1,0 +1,174 @@
+1. create your project folder “mkdir project_name”
+2. touch .rvmrc
+3. cd . (causes the .rvmrc file to be initialized)
+-when I backed out of the folder and then went back in the system did something different so you may want to back out one directory with “cd ..” then go back into your project folder to ensure setup correctly and ready for the gem install rails command.
+
+4. gem install rails (setup gems)
+5. rails new . (setup folder structure), auto runs “bundle install”, 
+	helpful commands: “bundle show” to list all the gems
+6. rails server (starts the server)
+
+Jewelry box, download, install, 
+you will have to allow program to run in security preferences (MAC)
+-open jewelry box, look at gemsets, gui tool
+
+
+7. open the localhost:3000 port to see the the welcome screen from Ruby on Rails
+8. set the root location for your server by updating the /config/routes.rb
+	
+	Rails.application.routes.draw do
+  	root 'home#index'
+	end
+9. rails generate controller home
+*now that your server is running you will need to open another Terminal session,
+*be sure that you are in your project folder
+*enter the command: “rails generate controller home”
+*remember the controller is singular
+
+10. if you refresh your http://localhost:3000 you will see a message
+ 	“The action 'index' could not be found for HomeController”
+*so you will need to create the index method in your HomeController
+*inside the /project/app/controllers/home_controller.rb
+_________	
+	class HomeController < ApplicationController
+		def index
+		end
+	end
+_________
+
+11. if you refresh your http://localhost:3000 you will see a message
+	“Missing template home/index, application/index” 
+*you will need to make a template for the index method to use 
+*navigate to this folder /project/app/view/home
+*create this file /project/app/views/home/index.html.erb
+*inside the /project/app/views/home/index.html.erb 
+_________
+
+<h1>Yeah the page is being displayed!</h1>
+
+_________
+
+*if you refresh your http://localhost:3000 you will see a message
+
+12. now you can see data but if you are going to use mysql then you will 
+need to do a few things to get the mysql to work with the rails server
+*anytime you change a config file you need to restart server
+*navigate to this folder /project/config/database.yml
+*inside this file /project/config/database.yml
+
+!!!!!!
+In this example we are using MySequelPro, so you will want to download and get
+that running for the next step.
+!!!!!!
+
+_________
+*configure database.yml
+*everywhere you see the entry of “sqlite3” replace that with “mysql2”
+*point database to mysql2
+	
+
+13. update the Gemfile to include mysql2
+*navigate to this folder /project/
+*inside this file /project/config/database.yml
+-add mysql2 to the Gemfile
+
+!!!!!!
+ok, so you just changed some config files in the config folder, 
+*now you will need to restart the server, 
+*at the server terminal enter “CTRL-C” to shutdown server
+*since we change the Gemfile we will need to go get that Gem 
+*enter “bundle install” at the terminal, remember you must be in your project folder
+-you should get a message “your bundle is complete”
+*we just told the gem to get found and placed on the system
+*now that is finished we can restart the server with the command “rails server”
+
+!!!!!!
+
+
+
+14. set the resources location for your server by updating the /config/routes.rb
+	
+		Rails.application.routes.draw do
+  		root 'home#index'
+	
+add this>>>>	resources :contacts
+		end
+
+*so we still don’t have a database yet but we are getting closer 
+*if you enter the command “rake routes” you should see something like this:
+______
+projects  rake routes
+      Prefix Verb   URI Pattern                  Controller#Action
+        root GET    /                            home#index
+    contacts GET    /contacts(.:format)          contacts#index
+             POST   /contacts(.:format)          contacts#create
+ new_contact GET    /contacts/new(.:format)      contacts#new
+edit_contact GET    /contacts/:id/edit(.:format) contacts#edit
+     contact GET    /contacts/:id(.:format)      contacts#show
+             PATCH  /contacts/:id(.:format)      contacts#update
+             PUT    /contacts/:id(.:format)      contacts#update
+             DELETE /contacts/:id(.:format)      contacts#destroy
+	
+
+15. now you are ready to create your db
+??before you do that go back to your browser and try to open http://localhost:3000
+
+-Rails tells you want you should do next:
+you will get the error message:
+
+Unknown database 'db/development.mysql2'Run `$ bin/rake db:create db:migrate` to create your database
+
+
+*when you create a resource in the route.rb file it will cause rake routes to be built
+*enter “rake db:create db:migrate”
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+	
+*now you are up and running and can create tables in your database
+
+
+
+-rails generate controller rolodex 
+-rails generate model rolodex
+-rake db migrate
+-open the Sequel pro (refresh databases - at top)
+
+partials: (filename starts with _)
+_form.html.erb
+<% render 'form' %>
+# the key word is form that tells 
+
+in your XXXXXController
+methods: 
+show, new, edit, update, create, delete
+
+def find_XXXXX
+	@blog = Bloginfo.find params[:id]
+
+cleanup:
+class PostsController < ApplicationController
+	before_filter :find_XXXXX, only: [:show, :edit, :update, :destroy]
+
+To make changes to database:
+
+use this command:
+rails generate migration add_fields_to_rolodexes 
+(give it whatever name you want)
+
+-edit the add_fields_to_rolodexesContoller.rb file
+
+def change
+	add_column :rolodexes, :phone_number, :string 
+	add_column :rolodexes, :email, :string 
+	add_column :rolodexes, :address, :string
+	add_column :rolodexes, :city, :string 
+	add_column :rolodexes, :zip, :string  
+	add_column :rolodexes, :description, :text 
+	add_column :rolodexes, :is_cool, :boolean 
+end
+
+then issue: rake db migrate
+
+
+
+

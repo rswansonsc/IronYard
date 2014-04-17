@@ -1,0 +1,28 @@
+This is a good template file for your readme.md file
+#your readme file should contain information about your process 
+#list mindset/process thoughts used to build and notes about
+#what the heck were you thinking when you made this and how it works
+
+# Program_Name in "Ruby/Java/jNote, ect..."
+By [Roger Swanson](https://github.com/rswansonsc)
+
+1. Instructions for use: (this is only an example)
+Run program by issuing commands in terminal 
+
+Required software:
+sinatra
+faker
+
+```
+console
+cd dir_name
+ruby file_to_run.rb
+```
+
+2. If you use this code for any work please offer credit back to the source.
+
+## License
+
+https://www.gnu.org/licenses/agpl.txt
+By [Roger Swanson](https://github.com/rswansonsc)
+www.rogerswanson.com

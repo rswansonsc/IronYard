@@ -1,0 +1,163 @@
+Common Commands:
+### Terminal Commands
+
+
+- touch ~/.gemrc
+- sub ~/.gemrc
+
+
+- rvm 2.1@XXXXX --create (where XXXXX = project name)
+- gem install rails
+- rails new XXXXX --create (where XXXXX = project name)
+	if you want to setup the rails structure in the folder you are in
+	enter this command "rails new ."
+- modify the AFTER YOU HAVE FINISHED YORU CONFIGURATIONS
+- rake db:create
+- rails generate controller blogs 
+(where blog is your controller)
+- rails generate model XXXXX
+- CONFIGURE THE MIGRATIONS
+- rake db:migrate
+- rails generate controller XXXXX
+- rake routes
+XXXXX = (where XXXXX is your project name)
+
+
+1. create folder for you Rails project
+2. setup .gemrc file in your root
+		in the ~/.gemrc file put the following line
+		gem: --no-rdoc --no-ri
+2a. touch .rvmrc
+	setup your .rvmrc rails version
+		in the folder where your project is sitting by entering 
+		touch .rvmrc
+		in the .rvmrc file put the version and a --create line
+		rvm 2.1@XXXXX --create (where XXXXX = project name)
+2b. install rails:
+	gem install rails
+
+	to see your version of rails type: rails -v
+	
+3. 	locate the file \config\database.yml in your folder structure
+		setup database first, by specify the gem of mysql2, comment out other lines that may conflict (ie. database: db/development.sqlite3)
+
+in file: database.yml (where XXXXX = project name)
+development:
+	adapter: 'mysql2'
+	database: XXXXX_development
+test:
+	adapter: 'mysql2'
+	database: XXXXX_test
+
+production:
+	adapter: 'mysql2'
+	database: XXXXX_production
+
+3a. locate your Gemfile in the project \ folder
+update the Gemfile to reflect the "mysql2" changes
+save the file, you may have to run the 
+"bundle install" to get the mysql2 gem on your system
+
+4. Rake - issue rake commands
+rake db:create
+rake db:migrate
+# you should see the databases created in the Sequel Pro
+
+5. start server
+rails server
+open browser on port 3000, localhost:3000 
+
+Command to start Rails server:
+rails server
+#default port is 3000 http://localhost:3000
+
+5a. to view your routes enter this command at a terminal when you are in your project directory:
+rake route
+
+**** Ok so now your Rails Server is running!
+
+Now you will need to setup the your app and structure or scaffold out your application.
+
+
+
+** Models **
+-always named singular
+-command to model 
+	rails generate model name (where name is the name you have given your model)
+-ActiveRecord is the connector to the mysql record
+
+find the file: \app\controllers\home_controller.rb 
+(you would put the following)
+
+class Que <ActiveRecord::Base
+	#need to create a MIGRATE
+def change
+	create_table :ques do |t|
+	#ques = table, the ID is automatically created we do not have to manually create
+		t.string
+		t.timestamp
+		#creates an created at and an updated at feild in the sql table
+		#When an object of Que type is created, 
+			#the created table feild will only be created once
+			#the updated feild 
+		end
+end
+
+** Views **
+Folder layout:
+\views
+
+** Controller ** 
+Command is - rails generate controller NAME
+-in controllers folder there is a application_controller.db
+-to setup a default root route to replace the default root page
+-always create a home controller (singular) best to call this "home", welcome the users to the application, each user has one true home location
+
+-this controls the first request to your server
+-this is the first step in setup
+-issue this command "rails generate controller home"
+-other controllers are call (plural) and call other data
+\app\controller\
+
+rake routes (in rails console, will give the URI pattern), uniform resource identifier
+verbs in rake: 	GET, POST, PATCH, PUT, DELETE
+type: rake routes on the console to show these verbs
+
+example:
+class QuesController < ApplicationController (file name = ques_controller.rb)
+def index
+end
+
+def show
+
+6. rails generate controller home
+-creates controller, you can crate this manually but RAILS
+-creates views
+-creats tests, assets, helper
+command: rails destroy controller XXXXX
+-will remove controller
+
+
+7. Data Setup (performed above)
+rake db: create
+rake db: migrate
+rake db: rollbak 
+# Rollback = versioning through schema_migration, similar to the CTRL-Z/CMD-Z keybd command)
+
+
+8. ActiveRecord is really cool:
+-attribute accessor are automatically created
+class Que < ActiveRecord
+
+
+a = Que.name
+a.name = "Brain", creates a new data entry and sets up params
+a.save = save the data, gives a true means your data was written to database
+
+Steps:
+b = Que.new
+b.name = Rich
+b.save
+
+Steps all at one time on a single line:
+Que.create {name: "Kevin"} = does all the steps at one time

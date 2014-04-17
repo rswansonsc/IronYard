@@ -1,0 +1,11 @@
+<h4>New Que</h4>
+
+<%= form_for do |f| %>
+	<%= f.label :name, placeholder: "Name" %>
+	<%= f.text_field :name %>
+	<%= f.submit "Create" %>
+	
+	#f is a form object
+	#this does your form, action, class, id, method (ie. post)
+	<br>
+	end

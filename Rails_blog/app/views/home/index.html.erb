@@ -1,0 +1,18 @@
+<h1>These are the Blog posts</h1>
+<ul>
+<% @blog_posts.each do |blogs| %>
+
+<li>
+<%= blogs.title %>  
+<%= blogs.content %>
+|
+
+<%= link_to "Show", post_path(blogs.id) %>
+<%= link_to "Edit", edit_post_path(blogs.id) %>
+
+<%= link_to "Home", root_path %>
+</li>
+<%end%>
+
+</ul>
+
