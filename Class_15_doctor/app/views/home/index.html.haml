@@ -1,9 +1,12 @@
 %h1 Hospital Client Room Activity
 =link_to 'New Office Patient Visitor', new_office_path
-%p
-	The time is now
-	= Time.now
-/ %ul
-/ 	- @offices.each do |office|
-/ 	%li
-/ 		this is a test
+%ul
+ - @offices.each do |office|
+  %li
+   =office.name 
+   =office.description
+   =link_to 'Show Patient', office_path(office)    
+   =link_to 'Edit Patient', edit_office_path(office)
+ %p
+ The time is now
+ = Time.now
