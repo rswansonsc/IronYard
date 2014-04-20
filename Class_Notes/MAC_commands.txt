@@ -1,7 +1,9 @@
 MAC
 CMD + Spacebar = MAC Spotlight (searches for MAC Program)
 CMD + Shift + 4 = Screen capture to file
-
+CMD + T = Fuzzy search in the app
+CMD + R = fuzzy search for Method
+CMD + P = 
 
 
 

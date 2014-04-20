@@ -64,8 +64,11 @@ that running for the next step.
 _________
 *configure database.yml
 *everywhere you see the entry of “sqlite3” replace that with “mysql2”
-*point database to mysql2
-	
+*this points Ruby database to mysql2
+
+*everywher you see the entry 
+"database: XXXXX"
+(where XXXXX = database name, singular)	
 
 13. update the Gemfile to include mysql2
 *navigate to this folder /project/
@@ -118,9 +121,12 @@ you will get the error message:
 
 Unknown database 'db/development.mysql2'Run `$ bin/rake db:create db:migrate` to create your database
 
+*open your Sequel Pro application and then 
+
 
 *when you create a resource in the route.rb file it will cause rake routes to be built
-*enter “rake db:create db:migrate”
+*enter “rake db:create db:migrate” - you can enter this on one line at the same time or as individual lines "rake db:create" then "db.migrate"
+s
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 	

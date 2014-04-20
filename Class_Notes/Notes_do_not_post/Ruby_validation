@@ -11,6 +11,7 @@ thelucid.com - a good source to look at
 at top of articles_controller.rb
 
 *** get from Nick notes:
+- in model 
 class ArticlesController < ApplicationController
 validates :name, presence; true
 validates :address, presence; true
@@ -19,10 +20,13 @@ validates :address, presence; true
 def create
 @rolodex = Rolodex.new 
 local variable
+
+if success = true
 flash [:notice] = "you were able to successfully able to -----"
 redirect_to root_path
 
-flash [:error] 
+flash [:error] = "you did not enter the info"
+redirect_to root_path
 
 to see errors use in Rails Console
 @rolodex.errors
