@@ -11,14 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140418160549) do
+ActiveRecord::Schema.define(version: 20140418154049) do
 
   create_table "offices", force: true do |t|
     t.string   "name"
     t.text     "description"
-    t.boolean  "difficult"
-    t.string   "cost"
-    t.string   "work_flow"
+    t.string   "workflow_state"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -3,8 +3,8 @@ class CreateOffices < ActiveRecord::Migration
     create_table :offices do |t|
     	t.string :name
     	t.text :description
-      # t.string :location
     	t.string :workflow_state
+      # t.string :location
       t.timestamps
     end
   end

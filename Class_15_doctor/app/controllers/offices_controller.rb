@@ -27,7 +27,7 @@ private
 	def office_params
 		params.require(:office).permit(:name, :description)
 	end
-
+# white listing attributes must list all attributes here to write, part of Ruby$
 
 end
 
