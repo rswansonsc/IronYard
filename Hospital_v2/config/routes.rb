@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  resources :medications
+  # resources :hospitals 
+  # resources :patients
+  # resources :medications
+  resources :hospitals do
+    resources :patients do
+    resources :medications
+    end    
+  end
 
-  resources :patients
-
-  resources :hospitals
-
-  get 'home/index'
+  # get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
