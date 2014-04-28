@@ -1,8 +1,7 @@
 The 5 essential Commands to get started right away with RubyonRails
 
 1. create directory
-2. touch .rvmrc, in the .rvmrc file "rvm 2.1@XXXXX --create (
-		where XXXXX = project name)"
+2. touch .rvmrc, in the .rvmrc file "rvm 2.1@XXXXX --create (where XXXXX = project name)"
 3. gem install rails
 4. rails server
 5. http://localhost:3000
