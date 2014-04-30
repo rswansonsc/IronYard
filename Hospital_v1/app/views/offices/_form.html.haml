@@ -1,0 +1,16 @@
+= form_for @office do |f|
+  =f.label :name
+  =f.text_field :name, placeholder: "Name"
+  %br
+  =f.label :description
+  =f.text_area :description, placeholder: "Description"
+  %br
+  / =f.label :cost
+  / =f.text_area :cost, placeholder: "Cost for Office Visit"
+  / %br
+  / =f.label :difficult
+  / =f.boolean :difficult, placeholder: "This is a particular Patient"
+  
+  =f.submit 
+%hr
+= link_to "Back to Patient Room Status", root_path

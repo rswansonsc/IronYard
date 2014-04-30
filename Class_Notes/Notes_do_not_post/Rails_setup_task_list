@@ -1,0 +1,30 @@
+make .rvmrc
+	rvm 2.1@office --create
+rails . new
+edit route 
+	make home route
+	root 'home#index'
+edit database.yml
+	  adapter: mysql2
+	 ren the database to match the .rvmrc 
+	 	 database: office_development
+	 	 database: office_test
+	 	 database: office_production
+edit Gemfile to add needed gems
+	gem 'mysql2'
+	gem 'workflow'
+rake db:create db:migrate
+
+rails generate controller home
+rails generate controller office
+rails generate model office
+
+Create database tables:
+edit db/migrate/201408184049_create_office.rb
+
+rake db:create db:migrate
+
+*you should be able to see the database and fields in SequelPro
+
+Once this is done you are ready to start building your pages:
+start with the home_controller.rb
