@@ -30,5 +30,5 @@ include Workflow
 		end
 
     state :leaving
-
+  end
 end

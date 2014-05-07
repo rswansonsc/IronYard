@@ -1,9 +1,10 @@
 class PatientsController < ApplicationController
-  before_action :set_patient, only: [:show, :edit, :update, :destroy]
-
+  before_filter :set_patient, only: [:show, :edit, :update, :destroy]
+  before_filter :find_hospital
   # GET /patients
   # GET /patients.json
   def index
+    @hospitals = Hospital.all
     @patients = Patient.all
   end
 
@@ -13,8 +14,9 @@ class PatientsController < ApplicationController
   end
 
   # GET /patients/new
-  def new
-    @patient = Patient.new
+  def new 
+    # @hospitals = Hospital.all
+    @patient = @hospital.patients.new
   end
 
   # GET /patients/1/edit
@@ -24,15 +26,15 @@ class PatientsController < ApplicationController
   # POST /patients
   # POST /patients.json
   def create
-    @patient = Patient.new(patient_params)
+    @patient = @hospital.patients.new(patient_params)
 
     respond_to do |format|
-      if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+      if @hospital.patient.save
+        format.html { redirect_to @hospital.patient, notice: 'Patient was successfully created.' }
         format.json { render :show, status: :created, location: @patient }
       else
         format.html { render :new }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
+        format.json { render json: @hospital.patient.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,12 +43,12 @@ class PatientsController < ApplicationController
   # PATCH/PUT /patients/1.json
   def update
     respond_to do |format|
-      if @patient.update(patient_params)
-        format.html { redirect_to @patient, notice: 'Patient was successfully updated.' }
+      if @hospital.patient.update(patient_params)
+        format.html { redirect_to @hospital.patient, notice: 'Patient was successfully updated.' }
         format.json { render :show, status: :ok, location: @patient }
       else
         format.html { render :edit }
-        format.json { render json: @patient.errors, status: :unprocessable_entity }
+        format.json { render json: @hospital.patient.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -54,7 +56,7 @@ class PatientsController < ApplicationController
   # DELETE /patients/1
   # DELETE /patients/1.json
   def destroy
-    @patient.destroy
+    @hospital.patient.destroy
     respond_to do |format|
       format.html { redirect_to patients_url }
       format.json { head :no_content }
@@ -63,8 +65,12 @@ class PatientsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def find_hospital
+      @hospital = Hospital.find params[:hospital_id]
+    end
+
     def set_patient
-      @patient = Patient.find(params[:id])
+      @patient = Patient.find params[:id]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

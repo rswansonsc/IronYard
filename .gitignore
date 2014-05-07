@@ -1,8 +1,8 @@
 .DS_Store
 ## class_1/*, - this will ignore all files in the class_1
 ## koans/* - will ignore all the files in the specified dir
+# THESE ARE SPECIFIC TO WORK ROGER IS DOING
 
-#book-txt-speech/*
 koans/*
 Notes_do_not_post/*
 lab1/*
@@ -11,3 +11,24 @@ Rails_1_initial_notes/*
 sinatra/*
 #web_blog/*
 projects/*
+
+# Ignore bundler config.
+/.bundle
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore other unneeded files.
+database.yml
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret

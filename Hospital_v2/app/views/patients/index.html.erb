@@ -16,9 +16,9 @@
         <td><%= patient.name %></td>
         <td><%= patient.description %></td>
         <td><%= patient.workflow_state %></td>
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', hospital_patient_path %></td>
+        <td><%= link_to 'Edit', edit_hospital_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', hospital_patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Patient', new_patient_path %>
+<%= link_to 'New Patient', new_hostpital_patient_path %>
