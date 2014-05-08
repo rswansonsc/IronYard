@@ -1,0 +1,33 @@
+Student Homework Build commands
+
+Gems Needed:
+
+gem "twitter-bootstrap-rails"
+gem 'haml-rails'
+gem 'jquery-ui-rails'
+gem 'nested_form'
+gem 'html2haml'
+gem 'workflow'
+
+
+
+Table Builds/db:create/db:migrate
+
+rails generate scaffold Location name_l email address city state zip
+
+rails generate scaffold Course name_course description_coruse links_course
+
+rails generate scaffold Assignment name_a descripion_a links_a
+
+rails generate scaffold Comment	date_c:date time_c:time links_c comment_detail:text
+
+rails generate scaffold Submission name_s descripion_s links_s
+
+
+
+
+
+
+
+
+

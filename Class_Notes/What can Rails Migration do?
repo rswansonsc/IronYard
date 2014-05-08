@@ -1,0 +1,45 @@
+What can Rails Migration do?
+
+create_table(name, options)
+
+drop_table(name)
+
+rename_table(old_name, new_name)
+
+add_column(table_name, column_name, type, options)
+
+rename_column(table_name, column_name, new_column_name)
+
+change_column(table_name, column_name, type, options)
+
+remove_column(table_name, column_name)
+
+add_index(table_name, column_name, index_type)
+
+remove_index(table_name, column_name)
+
+Migrations support all the basic data types: string, text, integer, float, datetime, timestamp, time, date, binary and boolean:
+
+string - is for small data types such as a title.
+
+text - is for longer pieces of textual data, such as the description.
+
+integer - is for whole numbers.
+
+float - is for decimals.
+
+datetime and timestamp - store the date and time into a column.
+
+date and time - store either the date only or time only.
+
+binary - is for storing data such as images, audio, or movies.
+
+boolean - is for storing true or false values.
+
+Valid column options are:
+
+limit ( :limit => “50” )
+
+default (:default => “blah” )
+
+null (:null => false implies NOT NULL)

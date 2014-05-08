@@ -1,4 +1,8 @@
 Git process:
+Option1 - create repository online and then push to GitHub
+1. create respository in your GitHub Account
+2. git remote add origin https://github.com/<username>/demo_app.git
+3. git push -u origin master
 
 git add .
 git commit -am "updates for week"

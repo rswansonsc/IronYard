@@ -6,6 +6,15 @@
 4. gem install rails (setup gems)
 5. rails new . (setup folder structure), auto runs “bundle install”, 
 	helpful commands: “bundle show” to list all the gems
+
+FYI: 	we can install the local gems while suppressing the installation of production gems 
+			using the --without production option
+
+bundle install --without production
+bundle update
+bundle install
+
+
 6. rails server (starts the server)
 
 Jewelry box, download, install, 
@@ -19,6 +28,14 @@ you will have to allow program to run in security preferences (MAC)
 	Rails.application.routes.draw do
   	root 'home#index'
 	end
+
+You should build your sites from scratch after building controller, get testing down with RSpec, that will come in time for now you can build a site with scaffolding in RubyV4 and one without...see the differences and learn
+
+Scaffold commands:
+rails generate scaffold User name:string email:string
+rails g scaffold name item1 item2 item3
+
+
 9. rails generate controller home
 *now that your server is running you will need to open another Terminal session,
 *be sure that you are in your project folder

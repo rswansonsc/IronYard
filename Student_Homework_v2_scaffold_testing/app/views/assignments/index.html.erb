@@ -1,0 +1,29 @@
+<h1>Listing assignments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name a</th>
+      <th>Descripion a</th>
+      <th>Links a</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assignments.each do |assignment| %>
+      <tr>
+        <td><%= assignment.name_a %></td>
+        <td><%= assignment.descripion_a %></td>
+        <td><%= assignment.links_a %></td>
+        <td><%= link_to 'Show', assignment %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assignment', new_assignment_path %>

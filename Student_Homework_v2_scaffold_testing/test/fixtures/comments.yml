@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date_c: 2014-05-08
+  time_c: 2014-05-08 00:42:56
+  links_c: MyString
+  comment_detail: MyText
+
+two:
+  date_c: 2014-05-08
+  time_c: 2014-05-08 00:42:56
+  links_c: MyString
+  comment_detail: MyText

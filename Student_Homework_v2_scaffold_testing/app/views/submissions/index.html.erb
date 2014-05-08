@@ -1,0 +1,29 @@
+<h1>Listing submissions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name s</th>
+      <th>Descripion s</th>
+      <th>Links s</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @submissions.each do |submission| %>
+      <tr>
+        <td><%= submission.name_s %></td>
+        <td><%= submission.descripion_s %></td>
+        <td><%= submission.links_s %></td>
+        <td><%= link_to 'Show', submission %></td>
+        <td><%= link_to 'Edit', edit_submission_path(submission) %></td>
+        <td><%= link_to 'Destroy', submission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Submission', new_submission_path %>
