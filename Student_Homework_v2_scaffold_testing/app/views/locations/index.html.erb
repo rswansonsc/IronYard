@@ -1,5 +1,5 @@
 <h1>Listing locations</h1>
-
+<h2>Please select a City to review course listings</h2>
 <table>
   <thead>
     <tr>
@@ -7,8 +7,9 @@
       <th>Description</th>
       <th>Address</th>
       <th>City</th>
-      <th>Zip</th>
-      <th colspan="3"></th>
+      <th>Zip</th> 
+      <th>Country</th>
+      <th colspan="5"></th>
     </tr>
   </thead>
 
@@ -18,7 +19,7 @@
         <td><%= location.name_l %></td>
         <td><%= location.description_l %></td>
         <td><%= location.address %></td>
-        <td><%= location.city %></td>
+        <td><%= location.city %> <%= location.country %></td>
         <td><%= location.zip %></td>
         <td><%= link_to 'Show', location %></td>
         <td><%= link_to 'Edit', edit_location_path(location) %></td>

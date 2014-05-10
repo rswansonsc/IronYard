@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140509211806) do
+ActiveRecord::Schema.define(version: 20140510014634) do
 
   create_table "assignments", force: true do |t|
     t.string   "name_a"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20140509211806) do
     t.string   "zip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "country"
   end
 
   create_table "submissions", force: true do |t|

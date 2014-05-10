@@ -26,5 +26,7 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= link_to 'Edit', edit_course_path(@course) %> |
+<%= link_to 'Course List', courses_path %>
   <%= link_to 'Home', root_path %>
 <% end %>

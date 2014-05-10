@@ -1,3 +1,7 @@
+<h1>Iron Yard Homework Tracker</h1>
+<%= link_to "Create Location", new_location_path %>
+<%= link_to "List Locations", locations_path(@location) %>
+
 <%= form_for(@location) do |f| %>
   <% if @location.errors.any? %>
     <div id="error_explanation">
@@ -31,8 +35,14 @@
     <%= f.label :zip %><br>
     <%= f.text_field :zip %>
   </div>
+  <div class="field"> 
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= link_to 'Locations List', locations_path %>
+  <%= link_to 'Course List', courses_path %>
   <%= link_to 'Home', root_path %>
 <% end %>
