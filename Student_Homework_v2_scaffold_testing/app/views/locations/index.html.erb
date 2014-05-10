@@ -3,8 +3,8 @@
 <table>
   <thead>
     <tr>
-      <th>Name l</th>
-      <th>Email</th>
+      <th>Location Name</th>
+      <th>Description</th>
       <th>Address</th>
       <th>City</th>
       <th>Zip</th>
@@ -16,7 +16,7 @@
     <% @locations.each do |location| %>
       <tr>
         <td><%= location.name_l %></td>
-        <td><%= location.email %></td>
+        <td><%= location.description_l %></td>
         <td><%= location.address %></td>
         <td><%= location.city %></td>
         <td><%= location.zip %></td>
@@ -31,3 +31,4 @@
 <br>
 
 <%= link_to 'New Location', new_location_path %>
+<%= link_to 'Home', root_path %>

@@ -12,18 +12,19 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name_course %><br>
+    <%= f.label :Name %><br>
     <%= f.text_field :name_course %>
   </div>
   <div class="field">
-    <%= f.label :description_coruse %><br>
-    <%= f.text_field :description_coruse %>
+    <%= f.label :Description %><br>
+    <%= f.text_field :description_course %>
   </div>
   <div class="field">
-    <%= f.label :links_course %><br>
+    <%= f.label :Links %><br>
     <%= f.text_field :links_course %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= link_to 'Home', root_path %>
 <% end %>

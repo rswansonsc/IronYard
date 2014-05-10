@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name l:</strong>
+  <strong>Name:</strong>
   <%= @location.name_l %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @location.email %>
+  <strong>Description:</strong>
+  <%= @location.description_l %>
 </p>
 
 <p>
@@ -25,5 +25,16 @@
   <%= @location.zip %>
 </p>
 
+<h1>Course Lists</h1>
+<%= link_to "Create Location", new_location_path %>
+  <hr>
+  <%@courses.each do |course| %>
+  <%= link_to course.name_course, location_course_path(location.course) %>
+  <%= link_to "Edit Course", edit_location_course_path(location.course) %>
+  <br>
+
+<% end %>
+
 <%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
+<%= link_to 'Home', root_path %>

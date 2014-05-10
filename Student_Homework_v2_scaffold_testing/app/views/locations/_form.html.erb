@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name_l %><br>
+    <%= f.label :name %><br>
     <%= f.text_field :name_l %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.label :description %><br>
+    <%= f.text_field :description_l %>
   </div>
   <div class="field">
     <%= f.label :address %><br>
@@ -34,4 +34,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  <%= link_to 'Home', root_path %>
 <% end %>
