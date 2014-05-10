@@ -1,0 +1,41 @@
+%h1 Iron Yard Homework Tracker
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th{colspan: "3"}
+  - @locations.each do |location|
+   =link_to location.name, location_path(location,these_locations: "hey here are locations")
+   %br  
+   = location.name_l
+   %br
+   = location.city
+
+ %hr
+ = link_to "Create a New Course", new_course_path
+ %br
+ = link_to "Create a New Assignment", new_assignment_path
+ %li
+ = link_to 'Show Assignments', assignment_path(@assignments)
+ %br
+ = link_to "Create a New Submission", new_submission_path
+ %br 
+ = link_to "Create a New Comment", new_comment_path
+
+
+
+
+  %hr
+  = link_to "Create a New Location", new_location_path
+  %hr
+  = link_to "Create a New Course", new_course_path
+  %br
+  = link_to "Create a New Assignment", new_assignment_path
+  %li
+  = link_to 'Show Assignments', assignment_path(@assignments)
+  
+  = link_to "Create a New Comment", new_comment_path
+  %br
+  = link_to "Create a New Submission", new_submission_path
+  %br

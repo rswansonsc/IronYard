@@ -1,0 +1,12 @@
+	<tbody>
+		<% form_for @location do |f| %>
+    <%= f.label :name_l %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.submit %>
+    <% end -%>
+ 	</tbody>
+
+ 	<%= link_to "Show Locations", location_path %>
+
+ 	<%= link_to 'Show Assignments', assignment_path %>

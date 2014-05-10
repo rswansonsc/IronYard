@@ -1,0 +1,10 @@
+%h1 Iron Yard Homework Tracker
+= link_to "Create Location", new_location_path
+%hr
+- @locations.each do |location|
+ = link_to location.name_l, location_path(location)
+ = link_to "Edit Location", edit_location_path(location)
+ %br
+
+ 
+ 

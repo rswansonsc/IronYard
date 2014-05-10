@@ -1,0 +1,36 @@
+<h1>Iron Yard Homework Tracker</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+<hr>
+<br>|
+<%= link_to "Create a New Location", new_location_path %>
+
+
+
+
+
+
+
+
+
+<hr>
+<%= link_to "Create a New Course", new_course_path %>
+<br>|
+<%= link_to "Create a New Assignment", new_assignment_path %>
+	<ul> 
+	<%= link_to 'Show Assignments', assignment_path(@assignments) %>
+	</ul>
+<br>|
+<%= link_to "Create a New Comment", new_comment_path %>
+<br>|
+<%= link_to "Create a New Submission", new_submission_path %>
+
+</table>
+<br>
