@@ -9,6 +9,8 @@ gem 'nested_form'
 gem 'html2haml'
 gem 'workflow'
 
+html2haml - usage = 
+find . -name \*.erb -print | sed 'p;s/.erb$/.haml/' | xargs -n2 html2haml
 
 
 Table Builds/db:create/db:migrate
