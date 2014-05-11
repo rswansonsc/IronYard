@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root 'home#index'
-	resources :locations
+	resources :locations do
  	resources :courses
-  resources :assignments 
- 	resources :submissions
-  resources :comments	
+  	resources :assignments do  
+ 		resources :submissions
+  	resources :comments	
+		end
+	end
 end
