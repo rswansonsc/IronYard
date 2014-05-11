@@ -5,7 +5,7 @@ edit route
 	make home route
 	root 'home#index'
 edit database.yml
-	  adapter: mysql2
+	adapter: mysql2
 	 ren the database to match the .rvmrc 
 	 	 database: office_development
 	 	 database: office_test
@@ -13,6 +13,9 @@ edit database.yml
 edit Gemfile to add needed gems
 	gem 'mysql2'
 	gem 'workflow'
+
+
+	
 rake db:create db:migrate
 
 rails generate controller home
