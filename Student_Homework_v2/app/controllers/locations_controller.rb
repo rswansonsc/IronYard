@@ -11,7 +11,7 @@ class LocationsController < ApplicationController
   # GET /locations/1.json
   def show
   @courses = @location.courses
-  # @assignments = @location.assginments
+  @assignments = @course.assignments
   end
 
   # GET /locations/new

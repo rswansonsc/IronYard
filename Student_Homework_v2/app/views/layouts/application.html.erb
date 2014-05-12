@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<!-- --- < before Yeild --- -->
 
 <%= yield %>
 
+<!-- --- < after Yeild --- -->
+ <hr>
+  <%= link_to 'Locations List', locations_path %>
+  <%= link_to 'Course List', courses_path %>
+  <%= link_to 'Assignment List', assignments_path %>
+  <%= link_to 'Home', root_path %>
 </body>
 </html>
