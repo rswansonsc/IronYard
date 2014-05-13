@@ -30,19 +30,20 @@
   <%= @location.country %>
 </p>
 <%= link_to "Create Location", new_location_path %>
+<ul>
+  Courses
+  <%= link_to "Create Course", new_location_course_path(@location) %>
+  
+  <% @courses.each do |course| %>
+    <li>
+      <%= link_to course.name_course, location_course_path(@location, course) %>
+      |
+      <%= course.description_course %>
+      |
+      <%= link_to "Edit", edit_location_course_path(@location, course) %>
+      |
+      <%= link_to "Delete", location_course_path(@location, course), method: :delete %>
+    </li>
+  <% end %>
+</ul>
 
-  <hr>
-  <h2>Course Lists</h2>
-
-  <hr>
-
-  <%@courses.each do |course| %>
-  <%= link_to course.name_course, location_course_path(location.course) %>
-  <%= link_to "Edit Course", edit_location_course_path(location.course) %>
-  <br>
-
-<% end %>
-
-<%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
-<%= link_to 'Home', root_path %>

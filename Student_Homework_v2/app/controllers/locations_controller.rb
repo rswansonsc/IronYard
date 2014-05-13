@@ -37,6 +37,7 @@ class LocationsController < ApplicationController
         format.json { render json: @location.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to root_path
   end
 
   # PATCH/PUT /locations/1
@@ -51,6 +52,7 @@ class LocationsController < ApplicationController
         format.json { render json: @location.errors, status: :unprocessable_entity }
       end
     end
+    redirect_to root_path
   end
 
   # DELETE /locations/1
@@ -61,6 +63,7 @@ class LocationsController < ApplicationController
       format.html { redirect_to locations_url, notice: 'Location was successfully destroyed.' }
       format.json { head :no_content }
     end
+    redirect_to root_path
   end
 
   private

@@ -10,12 +10,11 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
-  @assignments = @course.assignments
   end
 
   # GET /courses/new
   def new
-    @course = Course.new
+    @course = @location.course.new
   end
 
   # GET /courses/1/edit
