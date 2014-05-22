@@ -17,6 +17,7 @@ class LocationsController < ApplicationController
   # GET /locations/new
   def new
     @location = Location.new
+    @courses = @location.courses
   end
 
   # GET /locations/1/edit

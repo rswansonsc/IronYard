@@ -1,10 +1,10 @@
 class CoursesController < ApplicationController
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_locations, only: [:show, :edit, :update, :destroy]
   # GET /courses
   # GET /courses.json
   def index
-    @courses = Course.all
+    @courses = @location.course.all
   end
 
   # GET /courses/1
@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
 
   # GET /courses/new
   def new
-    @course = @location.course.new
+    @course = Course.new
   end
 
   # GET /courses/1/edit
@@ -63,6 +63,10 @@ class CoursesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_location
+      @location = location.course.find(params[:id])
+    end
+
     def set_course
       @course = Course.find(params[:id])
     end
