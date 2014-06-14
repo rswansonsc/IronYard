@@ -1,6 +1,6 @@
 This is a place where I put a bunch of my notes:
 
-It helps me to write down or type notes at the instructor is going through materials, sometimes I use these notes a lot
+It helps me to write down or type notes as the instructor is going through materials, sometimes I use these notes a lot
 sometimes I just keep them handy for reference later.  In an effort to learn GitHub better I have tried to put my notes in
 a reasonable order and leave these out for anyone it may help.
 
