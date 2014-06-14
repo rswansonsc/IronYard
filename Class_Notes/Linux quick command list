@@ -7,7 +7,10 @@ cat xxxx (show contents of a file)
 
 ls 		(list directory contents)
 ls -al (lists director contents plus hidden)
+
 mkdir (make a directory below your current location)
+rm -rf sd_images (removes the directory and all the files)
+
 cd .. (back up one level on the directory)
 
 to reload your alias list in terminal type:
