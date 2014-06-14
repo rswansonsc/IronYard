@@ -1,3 +1,5 @@
+Best book I have found for reference is: Linux Pocket Guide, Daniel J. Barrett
+get a free online copy from this site: http://www.it-ebooks.info
 
 
 
@@ -26,7 +28,8 @@ Note: If you ~/.bashrc does not run you will need to change
 a file called ~/.bash_profile
 
 Here is a note from Stackoverflow.com:
-Terminal opens a login shell. This means, ~/.bash_profile will get executed, ~/.bashrc not. The solution on most systems is to „require“ the ~/.bashrc in the ~/.bash_profile: 
+Terminal opens a login shell. This means, ~/.bash_profile will get executed, ~/.bashrc not. The solution on most systems 
+is to „require“ the ~/.bashrc in the ~/.bash_profile: 
 
 - just put this snippet in your ~/.bash_profile file
 [[ -s ~/.bashrc ]] && source ~/.bashrc
