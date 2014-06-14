@@ -1,3 +1,0 @@
-CMD-SHIFT-P = set give ability to set syntax
-	ie: html, link, div, ect
-	
