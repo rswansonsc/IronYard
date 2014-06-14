@@ -1,0 +1,6 @@
+This copy used in conduction with Homework projects and learning of Roger Swanson
+
+Attending http://theironyard.com 
+
+http://asanderson.org/posts/2013/06/03/bootstrapping-angular-rails-part-1.html
+

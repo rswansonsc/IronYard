@@ -1,0 +1,21 @@
+/app/assets/stylesheets/XXXXX.css
+
+Filename = XXXXX.css
+file is associtate with the
+
+file is auto created with file extension of:
+rails has a css styler called sassy css to use as a standard css file just rename the file
+XXXXX.css.scss
+
+to use the css file for styling all you have to do is remove the scss at end of file
+
+.notice {
+	background-color: rgb(40, 193, 255);
+	border: 1px solid red;
+}
+
+.error {
+	background-color: rgb(251, 247, 238);
+	border: 1px solid red;
+}
+
